@@ -10,7 +10,10 @@
 
 - ## Diagrama de casos de uso
 
-![](/Diagrama%20de%20caso%20de%20uso.png)
+![](/DiagramaCasoUso.png)
 
+- ## Diagrama de classe
+
+![](/DiagramaClasse.png)
 
 # **...**
