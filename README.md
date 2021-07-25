@@ -19,6 +19,7 @@
 - ## Diagrama de sequencia
 
     - ### Ver catalogo de biblioteca
+
     ![](/Asta/DiagramaSequenciaVerCatalogoBiblioteca.png)
     
     - ### Ver dados do livro
