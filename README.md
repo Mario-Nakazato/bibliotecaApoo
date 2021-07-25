@@ -10,10 +10,33 @@
 
 - ## Diagrama de casos de uso
 
-![](/DiagramaCasoUso.png)
+![](/Asta/DiagramaCasoUso.png)
 
 - ## Diagrama de classe
 
-![](/DiagramaClasse.png)
+![](/Asta/DiagramaClasse.png)
+
+- ## Diagrama de sequencia
+
+    - ### Ver catalogo de biblioteca
+![](/Asta/DiagramaSequenciaVerCatalogoBiblioteca.png)
+
+    - ### Ver dados do livro
+![](/Asta/DiagramaSequenciaVerDadosLivro.png)
+
+    - ### Pesquisar livro
+![](/Asta/DiagramaSequenciaPesquisarLivro.png)
+
+    - ### Emprestar livro
+![](/Asta/DiagramaSequenciaEmprestarLivro.png)
+
+    - ### Devolver livro
+![](/Asta/DiagramaSequenciaDevolverLivro.png)
+
+    - ### Adicionar livro
+![](/Asta/DiagramaSequenciaAdicionarLivro.png)
+
+    - ### Remover livro
+![](/Asta/DiagramaSequenciaRemoverLivro.png)
 
 # **...**
