@@ -40,4 +40,8 @@
     - ### Remover livro
     ![](/Asta/DiagramaSequenciaRemoverLivro.png)
 
+- ## Diagrama de maquina de estado livro
+
+![](/Asta/DiagramaMaquinaEstadoLivro.png)
+
 # **...**
