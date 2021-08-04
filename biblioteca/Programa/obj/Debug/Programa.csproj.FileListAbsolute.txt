@@ -1,0 +1,10 @@
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\bin\Debug\Programa.exe.config
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\bin\Debug\Programa.exe
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\bin\Debug\Programa.pdb
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.csproj.AssemblyReference.cache
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.Form_Biblioteca.resources
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.Properties.Resources.resources
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.csproj.GenerateResource.cache
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.csproj.CoreCompileInputs.cache
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.exe
+C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.pdb
