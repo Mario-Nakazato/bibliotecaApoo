@@ -8,3 +8,23 @@ C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Program
 C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.csproj.CoreCompileInputs.cache
 C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.exe
 C:\Users\alvar\source\repos\bibliotecaApoo\Biblioteca\Programa\obj\Debug\Programa.pdb
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\Programa.exe.config
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\Programa.exe
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\Programa.pdb
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.csproj.AssemblyReference.cache
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.Form_Biblioteca.resources
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.Properties.Resources.resources
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.csproj.GenerateResource.cache
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.csproj.CoreCompileInputs.cache
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.exe
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.pdb
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\EntityFramework.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\EntityFramework.SqlServer.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\System.Data.SQLite.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\EntityFramework.xml
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\EntityFramework.SqlServer.xml
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\bin\Debug\System.Data.SQLite.xml
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.csproj.CopyComplete
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\Programa\obj\Debug\Programa.form_adicionar.resources
