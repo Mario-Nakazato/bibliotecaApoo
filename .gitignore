@@ -1,8 +1,5 @@
 #.gitignore
 #.vs
 biblioteca/.vs
-biblioteca/biblioteca/obj/Debug/DesignTimeResolveAssemblyReferences.cache
-biblioteca/biblioteca/obj/Debug/biblioteca.csproj.AssemblyReference.cache
-biblioteca/biblioteca/obj/Debug/biblioteca.csproj.GenerateResource.cache
 biblioteca/biblioteca/bin/Debug/biblioteca.exe
 biblioteca/biblioteca/obj/Debug/biblioteca.exe

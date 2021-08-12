@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//SQLite
+using System.Data.SQLite;
+
 namespace biblioteca
 {
     public partial class Form : System.Windows.Forms.Form
