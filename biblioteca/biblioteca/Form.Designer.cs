@@ -61,6 +61,7 @@ namespace biblioteca
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,16 +78,15 @@ namespace biblioteca
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button14 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -327,7 +327,7 @@ namespace biblioteca
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(262, 94);
+            this.textBox6.Location = new System.Drawing.Point(258, 96);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(210, 20);
             this.textBox6.TabIndex = 28;
@@ -362,6 +362,16 @@ namespace biblioteca
             this.tabPage1.Size = new System.Drawing.Size(718, 631);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Biblioteca";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::biblioteca.Properties.Resources.CapaLivroLua;
+            this.pictureBox1.Location = new System.Drawing.Point(470, 246);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(183, 261);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
             // 
             // richTextBox2
             // 
@@ -418,7 +428,7 @@ namespace biblioteca
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(371, 120);
+            this.button8.Location = new System.Drawing.Point(367, 122);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 45;
@@ -427,7 +437,7 @@ namespace biblioteca
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(290, 120);
+            this.button5.Location = new System.Drawing.Point(286, 122);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 30;
@@ -540,16 +550,6 @@ namespace biblioteca
             this.button7.Text = "Limpar";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::biblioteca.Properties.Resources.CapaLivroLua;
-            this.pictureBox1.Location = new System.Drawing.Point(470, 246);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 261);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,11 +569,11 @@ namespace biblioteca
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
