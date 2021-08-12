@@ -10,38 +10,41 @@
 
 - ## Diagrama de casos de uso
 
-![](/Asta/DiagramaCasoUso.png)
+![](/Astah/DiagramaCasoUso.png)
 
 - ## Diagrama de classe
 
-![](/Asta/DiagramaClasse.png)
+![](/Astah/DiagramaClasse.png)
 
 - ## Diagrama de sequencia
 
     - ### Ver catalogo de biblioteca
 
-    ![](/Asta/DiagramaSequenciaVerCatalogoBiblioteca.png)
+    ![](/Astah/DiagramaSequenciaVerCatalogoBiblioteca.png)
     
     - ### Ver dados do livro
-    ![](/Asta/DiagramaSequenciaVerDadosLivro.png)
+    ![](/Astah/DiagramaSequenciaVerDadosLivro.png)
 
     - ### Pesquisar livro
-    ![](/Asta/DiagramaSequenciaPesquisarLivro.png)
+    ![](/Astah/DiagramaSequenciaPesquisarLivro.png)
+
+    - ### Ver emprestimo
+    ![](/Astah/DiagramaSequenciaVerEmprestimo.png)
 
     - ### Emprestar livro
-    ![](/Asta/DiagramaSequenciaEmprestarLivro.png)
+    ![](/Astah/DiagramaSequenciaEmprestarLivro.png)
 
     - ### Devolver livro
-    ![](/Asta/DiagramaSequenciaDevolverLivro.png)
+    ![](/Astah/DiagramaSequenciaDevolverLivro.png)
 
     - ### Adicionar livro
-    ![](/Asta/DiagramaSequenciaAdicionarLivro.png)
+    ![](/Astah/DiagramaSequenciaAdicionarLivro.png)
 
     - ### Remover livro
-    ![](/Asta/DiagramaSequenciaRemoverLivro.png)
+    ![](/Astah/DiagramaSequenciaRemoverLivro.png) 
 
 - ## Diagrama de maquina de estado livro
 
-![](/Asta/DiagramaMaquinaEstadoLivro.png)
+![](/Astah/DiagramaMaquinaEstadoLivro.png)
 
 # **...**
