@@ -8,3 +8,12 @@ C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientad
 C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.exe
 C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.pdb
 C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.Form.resources
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.dll
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.dll
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.xml
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.xml
+C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.csproj.CopyComplete
