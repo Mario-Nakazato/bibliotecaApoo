@@ -29,8 +29,11 @@ namespace biblioteca
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvBanco = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,80 +44,101 @@ namespace biblioteca
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.nudQuantidadeEstoque = new System.Windows.Forms.NumericUpDown();
+            this.nudPublicadoEstoque = new System.Windows.Forms.NumericUpDown();
+            this.txtEditoraEstoque = new System.Windows.Forms.TextBox();
+            this.txtAutorEstoque = new System.Windows.Forms.TextBox();
+            this.txtTituloEstoque = new System.Windows.Forms.TextBox();
+            this.rtxDescricaoEstoque = new System.Windows.Forms.RichTextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdicionarEstoque = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnRemoverEstoque = new System.Windows.Forms.Button();
+            this.txtPesquisaBiblioteca = new System.Windows.Forms.TextBox();
+            this.tab = new System.Windows.Forms.TabControl();
+            this.tabBiblioteca = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblTituloBiblioteca = new System.Windows.Forms.Label();
+            this.lblAutorBiblioteca = new System.Windows.Forms.Label();
+            this.lblEditoraBiblioteca = new System.Windows.Forms.Label();
+            this.lblPublicadoBiblioteca = new System.Windows.Forms.Label();
+            this.lblDescricaoBiblioteca = new System.Windows.Forms.Label();
+            this.btnLimparBiblioteca = new System.Windows.Forms.Button();
+            this.btnBuscaBiblioteca = new System.Windows.Forms.Button();
+            this.tabEmprestimo = new System.Windows.Forms.TabPage();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.tabEstoque = new System.Windows.Forms.TabPage();
+            this.btnBuscarEstoque = new System.Windows.Forms.Button();
+            this.btnLimparEstoque = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.Editora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Publicado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rtxDescricaoBiblioteca = new System.Windows.Forms.RichTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBanco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadeEstoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPublicadoEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tab.SuspendLayout();
+            this.tabBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabEmprestimo.SuspendLayout();
+            this.tabEstoque.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView2
+            // dgvBanco
             // 
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBanco.AllowUserToAddRows = false;
+            this.dgvBanco.AllowUserToDeleteRows = false;
+            this.dgvBanco.AllowUserToResizeRows = false;
+            this.dgvBanco.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBanco.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dgvBanco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBanco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBanco.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.Column1,
-            this.Column2});
-            this.dataGridView2.Enabled = false;
-            this.dataGridView2.Location = new System.Drawing.Point(720, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(540, 675);
-            this.dataGridView2.TabIndex = 1;
+            this.Column2,
+            this.Editora,
+            this.Publicado,
+            this.Quantidade,
+            this.Descricao});
+            this.dgvBanco.Location = new System.Drawing.Point(720, 3);
+            this.dgvBanco.Name = "dgvBanco";
+            this.dgvBanco.RowHeadersVisible = false;
+            this.dgvBanco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBanco.Size = new System.Drawing.Size(540, 675);
+            this.dgvBanco.TabIndex = 1;
+            this.dgvBanco.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBanco_CellMouseClick);
             // 
             // label1
             // 
@@ -206,48 +230,58 @@ namespace biblioteca
             this.label10.TabIndex = 11;
             this.label10.Text = "Livros";
             // 
-            // numericUpDown1
+            // nudQuantidadeEstoque
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(392, 227);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown1.TabIndex = 12;
+            this.nudQuantidadeEstoque.Location = new System.Drawing.Point(392, 227);
+            this.nudQuantidadeEstoque.Maximum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.nudQuantidadeEstoque.Name = "nudQuantidadeEstoque";
+            this.nudQuantidadeEstoque.Size = new System.Drawing.Size(56, 20);
+            this.nudQuantidadeEstoque.TabIndex = 12;
             // 
-            // numericUpDown2
+            // nudPublicadoEstoque
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(238, 227);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown2.TabIndex = 13;
+            this.nudPublicadoEstoque.Location = new System.Drawing.Point(238, 227);
+            this.nudPublicadoEstoque.Maximum = new decimal(new int[] {
+            2121,
+            0,
+            0,
+            0});
+            this.nudPublicadoEstoque.Name = "nudPublicadoEstoque";
+            this.nudPublicadoEstoque.Size = new System.Drawing.Size(56, 20);
+            this.nudPublicadoEstoque.TabIndex = 13;
             // 
-            // textBox1
+            // txtEditoraEstoque
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtEditoraEstoque.Location = new System.Drawing.Point(238, 201);
+            this.txtEditoraEstoque.Name = "txtEditoraEstoque";
+            this.txtEditoraEstoque.Size = new System.Drawing.Size(210, 20);
+            this.txtEditoraEstoque.TabIndex = 14;
             // 
-            // textBox2
+            // txtAutorEstoque
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtAutorEstoque.Location = new System.Drawing.Point(238, 175);
+            this.txtAutorEstoque.Name = "txtAutorEstoque";
+            this.txtAutorEstoque.Size = new System.Drawing.Size(210, 20);
+            this.txtAutorEstoque.TabIndex = 15;
             // 
-            // textBox3
+            // txtTituloEstoque
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 149);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 20);
-            this.textBox3.TabIndex = 16;
+            this.txtTituloEstoque.Location = new System.Drawing.Point(238, 149);
+            this.txtTituloEstoque.Name = "txtTituloEstoque";
+            this.txtTituloEstoque.Size = new System.Drawing.Size(210, 20);
+            this.txtTituloEstoque.TabIndex = 16;
             // 
-            // richTextBox1
+            // rtxDescricaoEstoque
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(173, 273);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(356, 165);
-            this.richTextBox1.TabIndex = 17;
-            this.richTextBox1.Text = "";
+            this.rtxDescricaoEstoque.Location = new System.Drawing.Point(173, 273);
+            this.rtxDescricaoEstoque.Name = "rtxDescricaoEstoque";
+            this.rtxDescricaoEstoque.Size = new System.Drawing.Size(356, 165);
+            this.rtxDescricaoEstoque.TabIndex = 17;
+            this.rtxDescricaoEstoque.Text = "";
             // 
             // textBox4
             // 
@@ -273,7 +307,7 @@ namespace biblioteca
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(173, 278);
+            this.dataGridView3.Location = new System.Drawing.Point(814, 35);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(314, 165);
             this.dataGridView3.TabIndex = 21;
@@ -287,14 +321,15 @@ namespace biblioteca
             this.button1.Text = "Emprestar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAdicionarEstoque
             // 
-            this.button2.Location = new System.Drawing.Point(454, 444);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Adicionar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAdicionarEstoque.Location = new System.Drawing.Point(454, 444);
+            this.btnAdicionarEstoque.Name = "btnAdicionarEstoque";
+            this.btnAdicionarEstoque.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionarEstoque.TabIndex = 23;
+            this.btnAdicionarEstoque.Text = "Adicionar";
+            this.btnAdicionarEstoque.UseVisualStyleBackColor = true;
+            this.btnAdicionarEstoque.Click += new System.EventHandler(this.btnAdicionarEstoque_Click);
             // 
             // label11
             // 
@@ -321,52 +356,53 @@ namespace biblioteca
             this.button3.Text = "Devolver";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnRemoverEstoque
             // 
-            this.button4.Location = new System.Drawing.Point(373, 444);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Remover";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRemoverEstoque.Location = new System.Drawing.Point(373, 444);
+            this.btnRemoverEstoque.Name = "btnRemoverEstoque";
+            this.btnRemoverEstoque.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverEstoque.TabIndex = 27;
+            this.btnRemoverEstoque.Text = "Remover";
+            this.btnRemoverEstoque.UseVisualStyleBackColor = true;
+            this.btnRemoverEstoque.Click += new System.EventHandler(this.btnRemoverEstoque_Click);
             // 
-            // textBox6
+            // txtPesquisaBiblioteca
             // 
-            this.textBox6.Location = new System.Drawing.Point(258, 96);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(210, 20);
-            this.textBox6.TabIndex = 28;
+            this.txtPesquisaBiblioteca.Location = new System.Drawing.Point(258, 96);
+            this.txtPesquisaBiblioteca.Name = "txtPesquisaBiblioteca";
+            this.txtPesquisaBiblioteca.Size = new System.Drawing.Size(210, 20);
+            this.txtPesquisaBiblioteca.TabIndex = 28;
             // 
-            // tabControl1
+            // tab
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(711, 676);
-            this.tabControl1.TabIndex = 30;
+            this.tab.Controls.Add(this.tabBiblioteca);
+            this.tab.Controls.Add(this.tabEmprestimo);
+            this.tab.Controls.Add(this.tabEstoque);
+            this.tab.Location = new System.Drawing.Point(3, 3);
+            this.tab.Name = "tab";
+            this.tab.SelectedIndex = 0;
+            this.tab.Size = new System.Drawing.Size(711, 676);
+            this.tab.TabIndex = 30;
             // 
-            // tabPage1
+            // tabBiblioteca
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.richTextBox2);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(703, 650);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Biblioteca";
+            this.tabBiblioteca.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabBiblioteca.Controls.Add(this.rtxDescricaoBiblioteca);
+            this.tabBiblioteca.Controls.Add(this.pictureBox1);
+            this.tabBiblioteca.Controls.Add(this.lblTituloBiblioteca);
+            this.tabBiblioteca.Controls.Add(this.lblAutorBiblioteca);
+            this.tabBiblioteca.Controls.Add(this.lblEditoraBiblioteca);
+            this.tabBiblioteca.Controls.Add(this.lblPublicadoBiblioteca);
+            this.tabBiblioteca.Controls.Add(this.lblDescricaoBiblioteca);
+            this.tabBiblioteca.Controls.Add(this.btnLimparBiblioteca);
+            this.tabBiblioteca.Controls.Add(this.btnBuscaBiblioteca);
+            this.tabBiblioteca.Controls.Add(this.txtPesquisaBiblioteca);
+            this.tabBiblioteca.Location = new System.Drawing.Point(4, 22);
+            this.tabBiblioteca.Name = "tabBiblioteca";
+            this.tabBiblioteca.Padding = new System.Windows.Forms.Padding(3);
+            this.tabBiblioteca.Size = new System.Drawing.Size(703, 650);
+            this.tabBiblioteca.TabIndex = 0;
+            this.tabBiblioteca.Text = "Biblioteca";
             // 
             // pictureBox1
             // 
@@ -378,102 +414,96 @@ namespace biblioteca
             this.pictureBox1.TabIndex = 58;
             this.pictureBox1.TabStop = false;
             // 
-            // richTextBox2
+            // lblTituloBiblioteca
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(49, 352);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(356, 165);
-            this.richTextBox2.TabIndex = 57;
-            this.richTextBox2.Text = "";
+            this.lblTituloBiblioteca.AutoSize = true;
+            this.lblTituloBiblioteca.Location = new System.Drawing.Point(46, 231);
+            this.lblTituloBiblioteca.Name = "lblTituloBiblioteca";
+            this.lblTituloBiblioteca.Size = new System.Drawing.Size(36, 13);
+            this.lblTituloBiblioteca.TabIndex = 46;
+            this.lblTituloBiblioteca.Text = "Titulo:";
             // 
-            // label12
+            // lblAutorBiblioteca
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(46, 231);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 13);
-            this.label12.TabIndex = 46;
-            this.label12.Text = "Titulo";
+            this.lblAutorBiblioteca.AutoSize = true;
+            this.lblAutorBiblioteca.Location = new System.Drawing.Point(46, 257);
+            this.lblAutorBiblioteca.Name = "lblAutorBiblioteca";
+            this.lblAutorBiblioteca.Size = new System.Drawing.Size(35, 13);
+            this.lblAutorBiblioteca.TabIndex = 47;
+            this.lblAutorBiblioteca.Text = "Autor:";
             // 
-            // label13
+            // lblEditoraBiblioteca
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(46, 257);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 13);
-            this.label13.TabIndex = 47;
-            this.label13.Text = "Autor";
+            this.lblEditoraBiblioteca.AutoSize = true;
+            this.lblEditoraBiblioteca.Location = new System.Drawing.Point(46, 283);
+            this.lblEditoraBiblioteca.Name = "lblEditoraBiblioteca";
+            this.lblEditoraBiblioteca.Size = new System.Drawing.Size(43, 13);
+            this.lblEditoraBiblioteca.TabIndex = 48;
+            this.lblEditoraBiblioteca.Text = "Editora:";
             // 
-            // label14
+            // lblPublicadoBiblioteca
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(46, 283);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(40, 13);
-            this.label14.TabIndex = 48;
-            this.label14.Text = "Editora";
+            this.lblPublicadoBiblioteca.AutoSize = true;
+            this.lblPublicadoBiblioteca.Location = new System.Drawing.Point(46, 308);
+            this.lblPublicadoBiblioteca.Name = "lblPublicadoBiblioteca";
+            this.lblPublicadoBiblioteca.Size = new System.Drawing.Size(57, 13);
+            this.lblPublicadoBiblioteca.TabIndex = 49;
+            this.lblPublicadoBiblioteca.Text = "Publicado:";
             // 
-            // label15
+            // lblDescricaoBiblioteca
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(46, 308);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 13);
-            this.label15.TabIndex = 49;
-            this.label15.Text = "Publicado";
+            this.lblDescricaoBiblioteca.AutoSize = true;
+            this.lblDescricaoBiblioteca.Location = new System.Drawing.Point(46, 334);
+            this.lblDescricaoBiblioteca.Name = "lblDescricaoBiblioteca";
+            this.lblDescricaoBiblioteca.Size = new System.Drawing.Size(58, 13);
+            this.lblDescricaoBiblioteca.TabIndex = 51;
+            this.lblDescricaoBiblioteca.Text = "Descrição:";
             // 
-            // label17
+            // btnLimparBiblioteca
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(46, 336);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 13);
-            this.label17.TabIndex = 51;
-            this.label17.Text = "Descrição";
+            this.btnLimparBiblioteca.Location = new System.Drawing.Point(367, 122);
+            this.btnLimparBiblioteca.Name = "btnLimparBiblioteca";
+            this.btnLimparBiblioteca.Size = new System.Drawing.Size(75, 23);
+            this.btnLimparBiblioteca.TabIndex = 45;
+            this.btnLimparBiblioteca.Text = "Limpar";
+            this.btnLimparBiblioteca.UseVisualStyleBackColor = true;
+            this.btnLimparBiblioteca.Click += new System.EventHandler(this.btnLimparBiblioteca_Click);
             // 
-            // button8
+            // btnBuscaBiblioteca
             // 
-            this.button8.Location = new System.Drawing.Point(367, 122);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 45;
-            this.button8.Text = "Limpar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnBuscaBiblioteca.Location = new System.Drawing.Point(286, 122);
+            this.btnBuscaBiblioteca.Name = "btnBuscaBiblioteca";
+            this.btnBuscaBiblioteca.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscaBiblioteca.TabIndex = 30;
+            this.btnBuscaBiblioteca.Text = "Buscar";
+            this.btnBuscaBiblioteca.UseVisualStyleBackColor = true;
+            this.btnBuscaBiblioteca.Click += new System.EventHandler(this.btnBuscaBiblioteca_Click);
             // 
-            // button5
+            // tabEmprestimo
             // 
-            this.button5.Location = new System.Drawing.Point(286, 122);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "Buscar";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabPage2.Controls.Add(this.button11);
-            this.tabPage2.Controls.Add(this.button10);
-            this.tabPage2.Controls.Add(this.button9);
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.dataGridView3);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(703, 650);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Emprestimos";
+            this.tabEmprestimo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabEmprestimo.Controls.Add(this.dataGridView1);
+            this.tabEmprestimo.Controls.Add(this.button11);
+            this.tabEmprestimo.Controls.Add(this.button10);
+            this.tabEmprestimo.Controls.Add(this.button9);
+            this.tabEmprestimo.Controls.Add(this.button6);
+            this.tabEmprestimo.Controls.Add(this.button3);
+            this.tabEmprestimo.Controls.Add(this.label7);
+            this.tabEmprestimo.Controls.Add(this.textBox5);
+            this.tabEmprestimo.Controls.Add(this.label8);
+            this.tabEmprestimo.Controls.Add(this.label11);
+            this.tabEmprestimo.Controls.Add(this.label9);
+            this.tabEmprestimo.Controls.Add(this.button1);
+            this.tabEmprestimo.Controls.Add(this.label10);
+            this.tabEmprestimo.Controls.Add(this.textBox4);
+            this.tabEmprestimo.Controls.Add(this.dateTimePicker2);
+            this.tabEmprestimo.Controls.Add(this.dateTimePicker1);
+            this.tabEmprestimo.Location = new System.Drawing.Point(4, 22);
+            this.tabEmprestimo.Name = "tabEmprestimo";
+            this.tabEmprestimo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEmprestimo.Size = new System.Drawing.Size(703, 650);
+            this.tabEmprestimo.TabIndex = 1;
+            this.tabEmprestimo.Text = "Emprestimos";
             // 
             // button11
             // 
@@ -511,59 +541,183 @@ namespace biblioteca
             this.button6.Text = "Limpar";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabEstoque
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabPage3.Controls.Add(this.button14);
-            this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.richTextBox1);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.numericUpDown1);
-            this.tabPage3.Controls.Add(this.numericUpDown2);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(703, 650);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Estoque";
+            this.tabEstoque.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabEstoque.Controls.Add(this.btnBuscarEstoque);
+            this.tabEstoque.Controls.Add(this.btnLimparEstoque);
+            this.tabEstoque.Controls.Add(this.rtxDescricaoEstoque);
+            this.tabEstoque.Controls.Add(this.btnRemoverEstoque);
+            this.tabEstoque.Controls.Add(this.label1);
+            this.tabEstoque.Controls.Add(this.label2);
+            this.tabEstoque.Controls.Add(this.label3);
+            this.tabEstoque.Controls.Add(this.label4);
+            this.tabEstoque.Controls.Add(this.btnAdicionarEstoque);
+            this.tabEstoque.Controls.Add(this.label5);
+            this.tabEstoque.Controls.Add(this.label6);
+            this.tabEstoque.Controls.Add(this.nudQuantidadeEstoque);
+            this.tabEstoque.Controls.Add(this.nudPublicadoEstoque);
+            this.tabEstoque.Controls.Add(this.txtEditoraEstoque);
+            this.tabEstoque.Controls.Add(this.txtAutorEstoque);
+            this.tabEstoque.Controls.Add(this.txtTituloEstoque);
+            this.tabEstoque.Location = new System.Drawing.Point(4, 22);
+            this.tabEstoque.Name = "tabEstoque";
+            this.tabEstoque.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEstoque.Size = new System.Drawing.Size(703, 650);
+            this.tabEstoque.TabIndex = 2;
+            this.tabEstoque.Text = "Estoque";
             // 
-            // button14
+            // btnBuscarEstoque
             // 
-            this.button14.Location = new System.Drawing.Point(454, 147);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 31;
-            this.button14.Text = "Buscar";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnBuscarEstoque.Location = new System.Drawing.Point(454, 147);
+            this.btnBuscarEstoque.Name = "btnBuscarEstoque";
+            this.btnBuscarEstoque.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarEstoque.TabIndex = 31;
+            this.btnBuscarEstoque.Text = "Buscar";
+            this.btnBuscarEstoque.UseVisualStyleBackColor = true;
+            this.btnBuscarEstoque.Click += new System.EventHandler(this.btnBuscarEstoque_Click);
             // 
-            // button7
+            // btnLimparEstoque
             // 
-            this.button7.Location = new System.Drawing.Point(173, 444);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 28;
-            this.button7.Text = "Limpar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnLimparEstoque.Location = new System.Drawing.Point(173, 444);
+            this.btnLimparEstoque.Name = "btnLimparEstoque";
+            this.btnLimparEstoque.Size = new System.Drawing.Size(75, 23);
+            this.btnLimparEstoque.TabIndex = 28;
+            this.btnLimparEstoque.Text = "Limpar";
+            this.btnLimparEstoque.UseVisualStyleBackColor = true;
+            this.btnLimparEstoque.Click += new System.EventHandler(this.btnLimparEstoque_Click);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Título";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Autor";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Editora
+            // 
+            this.Editora.HeaderText = "Editora";
+            this.Editora.Name = "Editora";
+            this.Editora.Visible = false;
+            // 
+            // Publicado
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Publicado.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Publicado.FillWeight = 32F;
+            this.Publicado.HeaderText = "Publicado";
+            this.Publicado.Name = "Publicado";
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.Visible = false;
+            // 
+            // Descricao
+            // 
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.Visible = false;
+            // 
+            // rtxDescricaoBiblioteca
+            // 
+            this.rtxDescricaoBiblioteca.Location = new System.Drawing.Point(49, 350);
+            this.rtxDescricaoBiblioteca.Name = "rtxDescricaoBiblioteca";
+            this.rtxDescricaoBiblioteca.ReadOnly = true;
+            this.rtxDescricaoBiblioteca.Size = new System.Drawing.Size(356, 165);
+            this.rtxDescricaoBiblioteca.TabIndex = 59;
+            this.rtxDescricaoBiblioteca.Text = "";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.dataGridView1.Location = new System.Drawing.Point(173, 278);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(314, 165);
+            this.dataGridView1.TabIndex = 31;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Título";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Autor";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Editora";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn5.FillWeight = 32F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Publicado";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
             // 
             // Form
             // 
@@ -571,32 +725,35 @@ namespace biblioteca
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.tab);
+            this.Controls.Add(this.dgvBanco);
+            this.Controls.Add(this.dataGridView3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Biblioteca";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.Load += new System.EventHandler(this.Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBanco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadeEstoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPublicadoEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tab.ResumeLayout(false);
+            this.tabBiblioteca.ResumeLayout(false);
+            this.tabBiblioteca.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tabEmprestimo.ResumeLayout(false);
+            this.tabEmprestimo.PerformLayout();
+            this.tabEstoque.ResumeLayout(false);
+            this.tabEstoque.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvBanco;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -607,44 +764,57 @@ namespace biblioteca
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.NumericUpDown nudQuantidadeEstoque;
+        private System.Windows.Forms.NumericUpDown nudPublicadoEstoque;
+        private System.Windows.Forms.TextBox txtEditoraEstoque;
+        private System.Windows.Forms.TextBox txtAutorEstoque;
+        private System.Windows.Forms.TextBox txtTituloEstoque;
+        private System.Windows.Forms.RichTextBox rtxDescricaoEstoque;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdicionarEstoque;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnRemoverEstoque;
+        private System.Windows.Forms.TextBox txtPesquisaBiblioteca;
+        private System.Windows.Forms.TabControl tab;
+        private System.Windows.Forms.TabPage tabBiblioteca;
+        private System.Windows.Forms.TabPage tabEmprestimo;
+        private System.Windows.Forms.Button btnBuscaBiblioteca;
+        private System.Windows.Forms.TabPage tabEstoque;
+        private System.Windows.Forms.Button btnLimparBiblioteca;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnLimparEstoque;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnBuscarEstoque;
+        private System.Windows.Forms.Label lblTituloBiblioteca;
+        private System.Windows.Forms.Label lblAutorBiblioteca;
+        private System.Windows.Forms.Label lblEditoraBiblioteca;
+        private System.Windows.Forms.Label lblPublicadoBiblioteca;
+        private System.Windows.Forms.Label lblDescricaoBiblioteca;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Editora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Publicado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
+        private System.Windows.Forms.RichTextBox rtxDescricaoBiblioteca;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }
 
