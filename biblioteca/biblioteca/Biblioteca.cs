@@ -8,8 +8,5 @@ namespace biblioteca
 {
     class Biblioteca
     {
-        public Biblioteca() { 
-            
-        }
     }
 }
