@@ -92,13 +92,14 @@ namespace biblioteca
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView2.Location = new System.Drawing.Point(740, 34);
+            this.dataGridView2.Location = new System.Drawing.Point(720, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(512, 635);
+            this.dataGridView2.Size = new System.Drawing.Size(540, 675);
             this.dataGridView2.TabIndex = 1;
             // 
             // Column1
@@ -337,15 +338,15 @@ namespace biblioteca
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(726, 657);
+            this.tabControl1.Size = new System.Drawing.Size(711, 676);
             this.tabControl1.TabIndex = 30;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.richTextBox2);
             this.tabPage1.Controls.Add(this.label12);
@@ -359,7 +360,7 @@ namespace biblioteca
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(718, 631);
+            this.tabPage1.Size = new System.Drawing.Size(703, 650);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Biblioteca";
             // 
@@ -446,6 +447,7 @@ namespace biblioteca
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tabPage2.Controls.Add(this.button11);
             this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.button9);
@@ -465,10 +467,9 @@ namespace biblioteca
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(718, 631);
+            this.tabPage2.Size = new System.Drawing.Size(731, 640);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Emprestimos";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
@@ -508,6 +509,7 @@ namespace biblioteca
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tabPage3.Controls.Add(this.button14);
             this.tabPage3.Controls.Add(this.button7);
             this.tabPage3.Controls.Add(this.richTextBox1);
@@ -527,10 +529,9 @@ namespace biblioteca
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(718, 631);
+            this.tabPage3.Size = new System.Drawing.Size(731, 640);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Estoque";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
@@ -554,11 +555,12 @@ namespace biblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dataGridView2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
