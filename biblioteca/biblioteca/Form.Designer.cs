@@ -29,132 +29,148 @@ namespace biblioteca
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridViewDados = new System.Windows.Forms.DataGridView();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.lbl_Autor = new System.Windows.Forms.Label();
+            this.lbl_Editora = new System.Windows.Forms.Label();
+            this.lbl_Publicado = new System.Windows.Forms.Label();
+            this.lbl_Quantidade = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_empNome = new System.Windows.Forms.Label();
+            this.lbl_empdataEmprestimo = new System.Windows.Forms.Label();
+            this.lbl_empDataDevolucao = new System.Windows.Forms.Label();
+            this.lbl_empLivros = new System.Windows.Forms.Label();
+            this.num_Quantidade = new System.Windows.Forms.NumericUpDown();
+            this.num_Publicado = new System.Windows.Forms.NumericUpDown();
+            this.txb_Editora = new System.Windows.Forms.TextBox();
+            this.txb_Autor = new System.Windows.Forms.TextBox();
+            this.txb_Titulo = new System.Windows.Forms.TextBox();
+            this.txb_Descricao = new System.Windows.Forms.RichTextBox();
+            this.txb_empNome = new System.Windows.Forms.TextBox();
+            this.datetime_dataEmprestimo = new System.Windows.Forms.DateTimePicker();
+            this.datetime_dataDevolucao = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewLivrosEmprestados = new System.Windows.Forms.DataGridView();
+            this.bt_EmprestarLivros = new System.Windows.Forms.Button();
+            this.bt_AdicionarLivro = new System.Windows.Forms.Button();
+            this.lbl_empCodigo = new System.Windows.Forms.Label();
+            this.txb_empCodigo = new System.Windows.Forms.TextBox();
+            this.bt_DevolverLivros = new System.Windows.Forms.Button();
+            this.bt_RemoverLivro = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbc_Geral = new System.Windows.Forms.TabControl();
+            this.tbp_Biblioteca = new System.Windows.Forms.TabPage();
+            this.picb_ImagemBusca = new System.Windows.Forms.PictureBox();
+            this.txb_DescricaoBusca = new System.Windows.Forms.RichTextBox();
+            this.lbl_TituloBusca = new System.Windows.Forms.Label();
+            this.lbl_AutorBusca = new System.Windows.Forms.Label();
+            this.lbl_EditorBusca = new System.Windows.Forms.Label();
+            this.lbl_PublicadoBusca = new System.Windows.Forms.Label();
+            this.lbl_DescricaoBusca = new System.Windows.Forms.Label();
+            this.bt_LimparBusca = new System.Windows.Forms.Button();
+            this.bt_BuscarLivros = new System.Windows.Forms.Button();
+            this.tbp_Emprestimos = new System.Windows.Forms.TabPage();
+            this.bt_RemoverEmpLivros = new System.Windows.Forms.Button();
+            this.bt_AdicionarEmpLivros = new System.Windows.Forms.Button();
+            this.bt_BuscarEmprestimos = new System.Windows.Forms.Button();
+            this.bt_LimparEmpLivros = new System.Windows.Forms.Button();
+            this.tbp_Estoque = new System.Windows.Forms.TabPage();
+            this.bt_BuscarLivrosEstoque = new System.Windows.Forms.Button();
+            this.bt_LimparLivroEstoque = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_Quantidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_Publicado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivrosEmprestados)).BeginInit();
+            this.tbc_Geral.SuspendLayout();
+            this.tbp_Biblioteca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_ImagemBusca)).BeginInit();
+            this.tbp_Emprestimos.SuspendLayout();
+            this.tbp_Estoque.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView2
+            // dataGridViewDados
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewDados.AllowUserToAddRows = false;
+            this.dataGridViewDados.AllowUserToDeleteRows = false;
+            this.dataGridViewDados.AllowUserToResizeColumns = false;
+            this.dataGridViewDados.AllowUserToResizeRows = false;
+            this.dataGridViewDados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewDados.ColumnHeadersHeight = 30;
+            this.dataGridViewDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView2.Location = new System.Drawing.Point(740, 34);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(512, 635);
-            this.dataGridView2.TabIndex = 1;
+            this.dataGridViewDados.Location = new System.Drawing.Point(740, 34);
+            this.dataGridViewDados.Name = "dataGridViewDados";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDados.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewDados.RowHeadersVisible = false;
+            this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewDados.Size = new System.Drawing.Size(512, 635);
+            this.dataGridViewDados.TabIndex = 1;
+            this.dataGridViewDados.UseWaitCursor = true;
             // 
-            // Column1
+            // lbl_Titulo
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Location = new System.Drawing.Point(170, 152);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(33, 13);
+            this.lbl_Titulo.TabIndex = 2;
+            this.lbl_Titulo.Text = "Titulo";
             // 
-            // Column2
+            // lbl_Autor
             // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
+            this.lbl_Autor.AutoSize = true;
+            this.lbl_Autor.Location = new System.Drawing.Point(170, 178);
+            this.lbl_Autor.Name = "lbl_Autor";
+            this.lbl_Autor.Size = new System.Drawing.Size(32, 13);
+            this.lbl_Autor.TabIndex = 3;
+            this.lbl_Autor.Text = "Autor";
             // 
-            // label1
+            // lbl_Editora
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 152);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Titulo";
+            this.lbl_Editora.AutoSize = true;
+            this.lbl_Editora.Location = new System.Drawing.Point(170, 204);
+            this.lbl_Editora.Name = "lbl_Editora";
+            this.lbl_Editora.Size = new System.Drawing.Size(40, 13);
+            this.lbl_Editora.TabIndex = 4;
+            this.lbl_Editora.Text = "Editora";
             // 
-            // label2
+            // lbl_Publicado
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 178);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Autor";
+            this.lbl_Publicado.AutoSize = true;
+            this.lbl_Publicado.Location = new System.Drawing.Point(170, 229);
+            this.lbl_Publicado.Name = "lbl_Publicado";
+            this.lbl_Publicado.Size = new System.Drawing.Size(54, 13);
+            this.lbl_Publicado.TabIndex = 5;
+            this.lbl_Publicado.Text = "Publicado";
             // 
-            // label3
+            // lbl_Quantidade
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Editora";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(170, 229);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Publicado";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(324, 229);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Quantidade";
+            this.lbl_Quantidade.AutoSize = true;
+            this.lbl_Quantidade.Location = new System.Drawing.Point(324, 229);
+            this.lbl_Quantidade.Name = "lbl_Quantidade";
+            this.lbl_Quantidade.Size = new System.Drawing.Size(62, 13);
+            this.lbl_Quantidade.TabIndex = 6;
+            this.lbl_Quantidade.Text = "Quantidade";
             // 
             // label6
             // 
@@ -165,165 +181,165 @@ namespace biblioteca
             this.label6.TabIndex = 7;
             this.label6.Text = "Descrição";
             // 
-            // label7
+            // lbl_empNome
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(170, 183);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Nome";
+            this.lbl_empNome.AutoSize = true;
+            this.lbl_empNome.Location = new System.Drawing.Point(170, 183);
+            this.lbl_empNome.Name = "lbl_empNome";
+            this.lbl_empNome.Size = new System.Drawing.Size(35, 13);
+            this.lbl_empNome.TabIndex = 8;
+            this.lbl_empNome.Text = "Nome";
             // 
-            // label8
+            // lbl_empdataEmprestimo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(170, 209);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Data do emprestimo";
+            this.lbl_empdataEmprestimo.AutoSize = true;
+            this.lbl_empdataEmprestimo.Location = new System.Drawing.Point(170, 209);
+            this.lbl_empdataEmprestimo.Name = "lbl_empdataEmprestimo";
+            this.lbl_empdataEmprestimo.Size = new System.Drawing.Size(101, 13);
+            this.lbl_empdataEmprestimo.TabIndex = 9;
+            this.lbl_empdataEmprestimo.Text = "Data do emprestimo";
             // 
-            // label9
+            // lbl_empDataDevolucao
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(170, 235);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Data da Devolução";
+            this.lbl_empDataDevolucao.AutoSize = true;
+            this.lbl_empDataDevolucao.Location = new System.Drawing.Point(170, 235);
+            this.lbl_empDataDevolucao.Name = "lbl_empDataDevolucao";
+            this.lbl_empDataDevolucao.Size = new System.Drawing.Size(100, 13);
+            this.lbl_empDataDevolucao.TabIndex = 10;
+            this.lbl_empDataDevolucao.Text = "Data da Devolução";
             // 
-            // label10
+            // lbl_empLivros
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(170, 262);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Livros";
+            this.lbl_empLivros.AutoSize = true;
+            this.lbl_empLivros.Location = new System.Drawing.Point(170, 262);
+            this.lbl_empLivros.Name = "lbl_empLivros";
+            this.lbl_empLivros.Size = new System.Drawing.Size(35, 13);
+            this.lbl_empLivros.TabIndex = 11;
+            this.lbl_empLivros.Text = "Livros";
             // 
-            // numericUpDown1
+            // num_Quantidade
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(392, 227);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown1.TabIndex = 12;
+            this.num_Quantidade.Location = new System.Drawing.Point(392, 227);
+            this.num_Quantidade.Name = "num_Quantidade";
+            this.num_Quantidade.Size = new System.Drawing.Size(56, 20);
+            this.num_Quantidade.TabIndex = 12;
             // 
-            // numericUpDown2
+            // num_Publicado
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(238, 227);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown2.TabIndex = 13;
+            this.num_Publicado.Location = new System.Drawing.Point(238, 227);
+            this.num_Publicado.Name = "num_Publicado";
+            this.num_Publicado.Size = new System.Drawing.Size(56, 20);
+            this.num_Publicado.TabIndex = 13;
             // 
-            // textBox1
+            // txb_Editora
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 20);
-            this.textBox1.TabIndex = 14;
+            this.txb_Editora.Location = new System.Drawing.Point(238, 201);
+            this.txb_Editora.Name = "txb_Editora";
+            this.txb_Editora.Size = new System.Drawing.Size(210, 20);
+            this.txb_Editora.TabIndex = 14;
             // 
-            // textBox2
+            // txb_Autor
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 20);
-            this.textBox2.TabIndex = 15;
+            this.txb_Autor.Location = new System.Drawing.Point(238, 175);
+            this.txb_Autor.Name = "txb_Autor";
+            this.txb_Autor.Size = new System.Drawing.Size(210, 20);
+            this.txb_Autor.TabIndex = 15;
             // 
-            // textBox3
+            // txb_Titulo
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 149);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 20);
-            this.textBox3.TabIndex = 16;
+            this.txb_Titulo.Location = new System.Drawing.Point(238, 149);
+            this.txb_Titulo.Name = "txb_Titulo";
+            this.txb_Titulo.Size = new System.Drawing.Size(210, 20);
+            this.txb_Titulo.TabIndex = 16;
             // 
-            // richTextBox1
+            // txb_Descricao
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(173, 273);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(356, 165);
-            this.richTextBox1.TabIndex = 17;
-            this.richTextBox1.Text = "";
+            this.txb_Descricao.Location = new System.Drawing.Point(173, 273);
+            this.txb_Descricao.Name = "txb_Descricao";
+            this.txb_Descricao.Size = new System.Drawing.Size(356, 165);
+            this.txb_Descricao.TabIndex = 17;
+            this.txb_Descricao.Text = "";
             // 
-            // textBox4
+            // txb_empNome
             // 
-            this.textBox4.Location = new System.Drawing.Point(277, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(210, 20);
-            this.textBox4.TabIndex = 18;
+            this.txb_empNome.Location = new System.Drawing.Point(277, 180);
+            this.txb_empNome.Name = "txb_empNome";
+            this.txb_empNome.Size = new System.Drawing.Size(210, 20);
+            this.txb_empNome.TabIndex = 18;
             // 
-            // dateTimePicker1
+            // datetime_dataEmprestimo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(277, 206);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.datetime_dataEmprestimo.Location = new System.Drawing.Point(277, 206);
+            this.datetime_dataEmprestimo.Name = "datetime_dataEmprestimo";
+            this.datetime_dataEmprestimo.Size = new System.Drawing.Size(210, 20);
+            this.datetime_dataEmprestimo.TabIndex = 19;
             // 
-            // dateTimePicker2
+            // datetime_dataDevolucao
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(277, 235);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(211, 20);
-            this.dateTimePicker2.TabIndex = 20;
+            this.datetime_dataDevolucao.Location = new System.Drawing.Point(277, 235);
+            this.datetime_dataDevolucao.Name = "datetime_dataDevolucao";
+            this.datetime_dataDevolucao.Size = new System.Drawing.Size(211, 20);
+            this.datetime_dataDevolucao.TabIndex = 20;
             // 
-            // dataGridView3
+            // dataGridViewLivrosEmprestados
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(173, 278);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(314, 165);
-            this.dataGridView3.TabIndex = 21;
+            this.dataGridViewLivrosEmprestados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLivrosEmprestados.Location = new System.Drawing.Point(173, 278);
+            this.dataGridViewLivrosEmprestados.Name = "dataGridViewLivrosEmprestados";
+            this.dataGridViewLivrosEmprestados.Size = new System.Drawing.Size(314, 165);
+            this.dataGridViewLivrosEmprestados.TabIndex = 21;
             // 
-            // button1
+            // bt_EmprestarLivros
             // 
-            this.button1.Location = new System.Drawing.Point(412, 449);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Emprestar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_EmprestarLivros.Location = new System.Drawing.Point(412, 449);
+            this.bt_EmprestarLivros.Name = "bt_EmprestarLivros";
+            this.bt_EmprestarLivros.Size = new System.Drawing.Size(75, 23);
+            this.bt_EmprestarLivros.TabIndex = 22;
+            this.bt_EmprestarLivros.Text = "Emprestar";
+            this.bt_EmprestarLivros.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // bt_AdicionarLivro
             // 
-            this.button2.Location = new System.Drawing.Point(454, 444);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Adicionar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_AdicionarLivro.Location = new System.Drawing.Point(454, 444);
+            this.bt_AdicionarLivro.Name = "bt_AdicionarLivro";
+            this.bt_AdicionarLivro.Size = new System.Drawing.Size(75, 23);
+            this.bt_AdicionarLivro.TabIndex = 23;
+            this.bt_AdicionarLivro.Text = "Adicionar";
+            this.bt_AdicionarLivro.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // lbl_empCodigo
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(170, 157);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Codigo";
+            this.lbl_empCodigo.AutoSize = true;
+            this.lbl_empCodigo.Location = new System.Drawing.Point(170, 157);
+            this.lbl_empCodigo.Name = "lbl_empCodigo";
+            this.lbl_empCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lbl_empCodigo.TabIndex = 24;
+            this.lbl_empCodigo.Text = "Codigo";
             // 
-            // textBox5
+            // txb_empCodigo
             // 
-            this.textBox5.Location = new System.Drawing.Point(277, 154);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(210, 20);
-            this.textBox5.TabIndex = 25;
+            this.txb_empCodigo.Location = new System.Drawing.Point(277, 154);
+            this.txb_empCodigo.Name = "txb_empCodigo";
+            this.txb_empCodigo.Size = new System.Drawing.Size(210, 20);
+            this.txb_empCodigo.TabIndex = 25;
             // 
-            // button3
+            // bt_DevolverLivros
             // 
-            this.button3.Location = new System.Drawing.Point(331, 449);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Devolver";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_DevolverLivros.Location = new System.Drawing.Point(331, 449);
+            this.bt_DevolverLivros.Name = "bt_DevolverLivros";
+            this.bt_DevolverLivros.Size = new System.Drawing.Size(75, 23);
+            this.bt_DevolverLivros.TabIndex = 26;
+            this.bt_DevolverLivros.Text = "Devolver";
+            this.bt_DevolverLivros.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // bt_RemoverLivro
             // 
-            this.button4.Location = new System.Drawing.Point(373, 444);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Remover";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bt_RemoverLivro.Location = new System.Drawing.Point(373, 444);
+            this.bt_RemoverLivro.Name = "bt_RemoverLivro";
+            this.bt_RemoverLivro.Size = new System.Drawing.Size(75, 23);
+            this.bt_RemoverLivro.TabIndex = 27;
+            this.bt_RemoverLivro.Text = "Remover";
+            this.bt_RemoverLivro.UseVisualStyleBackColor = true;
             // 
             // textBox6
             // 
@@ -332,223 +348,235 @@ namespace biblioteca
             this.textBox6.Size = new System.Drawing.Size(210, 20);
             this.textBox6.TabIndex = 28;
             // 
-            // tabControl1
+            // tbc_Geral
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(726, 657);
-            this.tabControl1.TabIndex = 30;
+            this.tbc_Geral.Controls.Add(this.tbp_Biblioteca);
+            this.tbc_Geral.Controls.Add(this.tbp_Emprestimos);
+            this.tbc_Geral.Controls.Add(this.tbp_Estoque);
+            this.tbc_Geral.Location = new System.Drawing.Point(12, 12);
+            this.tbc_Geral.Name = "tbc_Geral";
+            this.tbc_Geral.SelectedIndex = 0;
+            this.tbc_Geral.Size = new System.Drawing.Size(726, 657);
+            this.tbc_Geral.TabIndex = 30;
             // 
-            // tabPage1
+            // tbp_Biblioteca
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.richTextBox2);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(718, 631);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Biblioteca";
+            this.tbp_Biblioteca.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbp_Biblioteca.Controls.Add(this.picb_ImagemBusca);
+            this.tbp_Biblioteca.Controls.Add(this.txb_DescricaoBusca);
+            this.tbp_Biblioteca.Controls.Add(this.lbl_TituloBusca);
+            this.tbp_Biblioteca.Controls.Add(this.lbl_AutorBusca);
+            this.tbp_Biblioteca.Controls.Add(this.lbl_EditorBusca);
+            this.tbp_Biblioteca.Controls.Add(this.lbl_PublicadoBusca);
+            this.tbp_Biblioteca.Controls.Add(this.lbl_DescricaoBusca);
+            this.tbp_Biblioteca.Controls.Add(this.bt_LimparBusca);
+            this.tbp_Biblioteca.Controls.Add(this.bt_BuscarLivros);
+            this.tbp_Biblioteca.Controls.Add(this.textBox6);
+            this.tbp_Biblioteca.Location = new System.Drawing.Point(4, 22);
+            this.tbp_Biblioteca.Name = "tbp_Biblioteca";
+            this.tbp_Biblioteca.Padding = new System.Windows.Forms.Padding(3);
+            this.tbp_Biblioteca.Size = new System.Drawing.Size(718, 631);
+            this.tbp_Biblioteca.TabIndex = 0;
+            this.tbp_Biblioteca.Text = "Biblioteca";
             // 
-            // pictureBox1
+            // picb_ImagemBusca
             // 
-            this.pictureBox1.Image = global::biblioteca.Properties.Resources.CapaLivroLua;
-            this.pictureBox1.Location = new System.Drawing.Point(470, 246);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 261);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
+            this.picb_ImagemBusca.Image = global::biblioteca.Properties.Resources.CapaLivroLua;
+            this.picb_ImagemBusca.Location = new System.Drawing.Point(470, 246);
+            this.picb_ImagemBusca.Name = "picb_ImagemBusca";
+            this.picb_ImagemBusca.Size = new System.Drawing.Size(183, 261);
+            this.picb_ImagemBusca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picb_ImagemBusca.TabIndex = 58;
+            this.picb_ImagemBusca.TabStop = false;
             // 
-            // richTextBox2
+            // txb_DescricaoBusca
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(49, 352);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(356, 165);
-            this.richTextBox2.TabIndex = 57;
-            this.richTextBox2.Text = "";
+            this.txb_DescricaoBusca.Location = new System.Drawing.Point(49, 352);
+            this.txb_DescricaoBusca.Name = "txb_DescricaoBusca";
+            this.txb_DescricaoBusca.Size = new System.Drawing.Size(356, 165);
+            this.txb_DescricaoBusca.TabIndex = 57;
+            this.txb_DescricaoBusca.Text = "";
             // 
-            // label12
+            // lbl_TituloBusca
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(46, 231);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 13);
-            this.label12.TabIndex = 46;
-            this.label12.Text = "Titulo";
+            this.lbl_TituloBusca.AutoSize = true;
+            this.lbl_TituloBusca.Location = new System.Drawing.Point(46, 231);
+            this.lbl_TituloBusca.Name = "lbl_TituloBusca";
+            this.lbl_TituloBusca.Size = new System.Drawing.Size(33, 13);
+            this.lbl_TituloBusca.TabIndex = 46;
+            this.lbl_TituloBusca.Text = "Titulo";
             // 
-            // label13
+            // lbl_AutorBusca
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(46, 257);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 13);
-            this.label13.TabIndex = 47;
-            this.label13.Text = "Autor";
+            this.lbl_AutorBusca.AutoSize = true;
+            this.lbl_AutorBusca.Location = new System.Drawing.Point(46, 257);
+            this.lbl_AutorBusca.Name = "lbl_AutorBusca";
+            this.lbl_AutorBusca.Size = new System.Drawing.Size(32, 13);
+            this.lbl_AutorBusca.TabIndex = 47;
+            this.lbl_AutorBusca.Text = "Autor";
             // 
-            // label14
+            // lbl_EditorBusca
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(46, 283);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(40, 13);
-            this.label14.TabIndex = 48;
-            this.label14.Text = "Editora";
+            this.lbl_EditorBusca.AutoSize = true;
+            this.lbl_EditorBusca.Location = new System.Drawing.Point(46, 283);
+            this.lbl_EditorBusca.Name = "lbl_EditorBusca";
+            this.lbl_EditorBusca.Size = new System.Drawing.Size(40, 13);
+            this.lbl_EditorBusca.TabIndex = 48;
+            this.lbl_EditorBusca.Text = "Editora";
             // 
-            // label15
+            // lbl_PublicadoBusca
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(46, 308);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 13);
-            this.label15.TabIndex = 49;
-            this.label15.Text = "Publicado";
+            this.lbl_PublicadoBusca.AutoSize = true;
+            this.lbl_PublicadoBusca.Location = new System.Drawing.Point(46, 308);
+            this.lbl_PublicadoBusca.Name = "lbl_PublicadoBusca";
+            this.lbl_PublicadoBusca.Size = new System.Drawing.Size(54, 13);
+            this.lbl_PublicadoBusca.TabIndex = 49;
+            this.lbl_PublicadoBusca.Text = "Publicado";
             // 
-            // label17
+            // lbl_DescricaoBusca
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(46, 336);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 13);
-            this.label17.TabIndex = 51;
-            this.label17.Text = "Descrição";
+            this.lbl_DescricaoBusca.AutoSize = true;
+            this.lbl_DescricaoBusca.Location = new System.Drawing.Point(46, 336);
+            this.lbl_DescricaoBusca.Name = "lbl_DescricaoBusca";
+            this.lbl_DescricaoBusca.Size = new System.Drawing.Size(55, 13);
+            this.lbl_DescricaoBusca.TabIndex = 51;
+            this.lbl_DescricaoBusca.Text = "Descrição";
             // 
-            // button8
+            // bt_LimparBusca
             // 
-            this.button8.Location = new System.Drawing.Point(367, 122);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 45;
-            this.button8.Text = "Limpar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.bt_LimparBusca.Location = new System.Drawing.Point(367, 122);
+            this.bt_LimparBusca.Name = "bt_LimparBusca";
+            this.bt_LimparBusca.Size = new System.Drawing.Size(75, 23);
+            this.bt_LimparBusca.TabIndex = 45;
+            this.bt_LimparBusca.Text = "Limpar";
+            this.bt_LimparBusca.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // bt_BuscarLivros
             // 
-            this.button5.Location = new System.Drawing.Point(286, 122);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "Buscar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.bt_BuscarLivros.Location = new System.Drawing.Point(286, 122);
+            this.bt_BuscarLivros.Name = "bt_BuscarLivros";
+            this.bt_BuscarLivros.Size = new System.Drawing.Size(75, 23);
+            this.bt_BuscarLivros.TabIndex = 30;
+            this.bt_BuscarLivros.Text = "Buscar";
+            this.bt_BuscarLivros.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tbp_Emprestimos
             // 
-            this.tabPage2.Controls.Add(this.button11);
-            this.tabPage2.Controls.Add(this.button10);
-            this.tabPage2.Controls.Add(this.button9);
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.dataGridView3);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(718, 631);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Emprestimos";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tbp_Emprestimos.Controls.Add(this.bt_RemoverEmpLivros);
+            this.tbp_Emprestimos.Controls.Add(this.bt_AdicionarEmpLivros);
+            this.tbp_Emprestimos.Controls.Add(this.bt_BuscarEmprestimos);
+            this.tbp_Emprestimos.Controls.Add(this.bt_LimparEmpLivros);
+            this.tbp_Emprestimos.Controls.Add(this.dataGridViewLivrosEmprestados);
+            this.tbp_Emprestimos.Controls.Add(this.bt_DevolverLivros);
+            this.tbp_Emprestimos.Controls.Add(this.lbl_empNome);
+            this.tbp_Emprestimos.Controls.Add(this.txb_empCodigo);
+            this.tbp_Emprestimos.Controls.Add(this.lbl_empdataEmprestimo);
+            this.tbp_Emprestimos.Controls.Add(this.lbl_empCodigo);
+            this.tbp_Emprestimos.Controls.Add(this.lbl_empDataDevolucao);
+            this.tbp_Emprestimos.Controls.Add(this.bt_EmprestarLivros);
+            this.tbp_Emprestimos.Controls.Add(this.lbl_empLivros);
+            this.tbp_Emprestimos.Controls.Add(this.txb_empNome);
+            this.tbp_Emprestimos.Controls.Add(this.datetime_dataDevolucao);
+            this.tbp_Emprestimos.Controls.Add(this.datetime_dataEmprestimo);
+            this.tbp_Emprestimos.Location = new System.Drawing.Point(4, 22);
+            this.tbp_Emprestimos.Name = "tbp_Emprestimos";
+            this.tbp_Emprestimos.Padding = new System.Windows.Forms.Padding(3);
+            this.tbp_Emprestimos.Size = new System.Drawing.Size(718, 631);
+            this.tbp_Emprestimos.TabIndex = 1;
+            this.tbp_Emprestimos.Text = "Emprestimos";
+            this.tbp_Emprestimos.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // bt_RemoverEmpLivros
             // 
-            this.button11.Location = new System.Drawing.Point(493, 307);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 30;
-            this.button11.Text = "Remover";
-            this.button11.UseVisualStyleBackColor = true;
+            this.bt_RemoverEmpLivros.Location = new System.Drawing.Point(493, 307);
+            this.bt_RemoverEmpLivros.Name = "bt_RemoverEmpLivros";
+            this.bt_RemoverEmpLivros.Size = new System.Drawing.Size(75, 23);
+            this.bt_RemoverEmpLivros.TabIndex = 30;
+            this.bt_RemoverEmpLivros.Text = "Remover";
+            this.bt_RemoverEmpLivros.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // bt_AdicionarEmpLivros
             // 
-            this.button10.Location = new System.Drawing.Point(493, 278);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 29;
-            this.button10.Text = "Adicionar";
-            this.button10.UseVisualStyleBackColor = true;
+            this.bt_AdicionarEmpLivros.Location = new System.Drawing.Point(493, 278);
+            this.bt_AdicionarEmpLivros.Name = "bt_AdicionarEmpLivros";
+            this.bt_AdicionarEmpLivros.Size = new System.Drawing.Size(75, 23);
+            this.bt_AdicionarEmpLivros.TabIndex = 29;
+            this.bt_AdicionarEmpLivros.Text = "Adicionar";
+            this.bt_AdicionarEmpLivros.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // bt_BuscarEmprestimos
             // 
-            this.button9.Location = new System.Drawing.Point(493, 152);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 28;
-            this.button9.Text = "Buscar";
-            this.button9.UseVisualStyleBackColor = true;
+            this.bt_BuscarEmprestimos.Location = new System.Drawing.Point(493, 152);
+            this.bt_BuscarEmprestimos.Name = "bt_BuscarEmprestimos";
+            this.bt_BuscarEmprestimos.Size = new System.Drawing.Size(75, 23);
+            this.bt_BuscarEmprestimos.TabIndex = 28;
+            this.bt_BuscarEmprestimos.Text = "Buscar";
+            this.bt_BuscarEmprestimos.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // bt_LimparEmpLivros
             // 
-            this.button6.Location = new System.Drawing.Point(173, 449);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "Limpar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.bt_LimparEmpLivros.Location = new System.Drawing.Point(173, 449);
+            this.bt_LimparEmpLivros.Name = "bt_LimparEmpLivros";
+            this.bt_LimparEmpLivros.Size = new System.Drawing.Size(75, 23);
+            this.bt_LimparEmpLivros.TabIndex = 27;
+            this.bt_LimparEmpLivros.Text = "Limpar";
+            this.bt_LimparEmpLivros.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tbp_Estoque
             // 
-            this.tabPage3.Controls.Add(this.button14);
-            this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.richTextBox1);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.numericUpDown1);
-            this.tabPage3.Controls.Add(this.numericUpDown2);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(718, 631);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Estoque";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tbp_Estoque.Controls.Add(this.bt_BuscarLivrosEstoque);
+            this.tbp_Estoque.Controls.Add(this.bt_LimparLivroEstoque);
+            this.tbp_Estoque.Controls.Add(this.txb_Descricao);
+            this.tbp_Estoque.Controls.Add(this.bt_RemoverLivro);
+            this.tbp_Estoque.Controls.Add(this.lbl_Titulo);
+            this.tbp_Estoque.Controls.Add(this.lbl_Autor);
+            this.tbp_Estoque.Controls.Add(this.lbl_Editora);
+            this.tbp_Estoque.Controls.Add(this.lbl_Publicado);
+            this.tbp_Estoque.Controls.Add(this.bt_AdicionarLivro);
+            this.tbp_Estoque.Controls.Add(this.lbl_Quantidade);
+            this.tbp_Estoque.Controls.Add(this.label6);
+            this.tbp_Estoque.Controls.Add(this.num_Quantidade);
+            this.tbp_Estoque.Controls.Add(this.num_Publicado);
+            this.tbp_Estoque.Controls.Add(this.txb_Editora);
+            this.tbp_Estoque.Controls.Add(this.txb_Autor);
+            this.tbp_Estoque.Controls.Add(this.txb_Titulo);
+            this.tbp_Estoque.Location = new System.Drawing.Point(4, 22);
+            this.tbp_Estoque.Name = "tbp_Estoque";
+            this.tbp_Estoque.Padding = new System.Windows.Forms.Padding(3);
+            this.tbp_Estoque.Size = new System.Drawing.Size(718, 631);
+            this.tbp_Estoque.TabIndex = 2;
+            this.tbp_Estoque.Text = "Estoque";
+            this.tbp_Estoque.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // bt_BuscarLivrosEstoque
             // 
-            this.button14.Location = new System.Drawing.Point(454, 147);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 31;
-            this.button14.Text = "Buscar";
-            this.button14.UseVisualStyleBackColor = true;
+            this.bt_BuscarLivrosEstoque.Location = new System.Drawing.Point(454, 147);
+            this.bt_BuscarLivrosEstoque.Name = "bt_BuscarLivrosEstoque";
+            this.bt_BuscarLivrosEstoque.Size = new System.Drawing.Size(75, 23);
+            this.bt_BuscarLivrosEstoque.TabIndex = 31;
+            this.bt_BuscarLivrosEstoque.Text = "Buscar";
+            this.bt_BuscarLivrosEstoque.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // bt_LimparLivroEstoque
             // 
-            this.button7.Location = new System.Drawing.Point(173, 444);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 28;
-            this.button7.Text = "Limpar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.bt_LimparLivroEstoque.Location = new System.Drawing.Point(173, 444);
+            this.bt_LimparLivroEstoque.Name = "bt_LimparLivroEstoque";
+            this.bt_LimparLivroEstoque.Size = new System.Drawing.Size(75, 23);
+            this.bt_LimparLivroEstoque.TabIndex = 28;
+            this.bt_LimparLivroEstoque.Text = "Limpar";
+            this.bt_LimparLivroEstoque.UseVisualStyleBackColor = true;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 60F;
+            this.Column1.HeaderText = "Título";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 40F;
+            this.Column2.HeaderText = "Autor";
+            this.Column2.Name = "Column2";
             // 
             // Form
             // 
@@ -556,79 +584,79 @@ namespace biblioteca
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.tbc_Geral);
+            this.Controls.Add(this.dataGridViewDados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Biblioteca";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_Quantidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_Publicado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivrosEmprestados)).EndInit();
+            this.tbc_Geral.ResumeLayout(false);
+            this.tbp_Biblioteca.ResumeLayout(false);
+            this.tbp_Biblioteca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_ImagemBusca)).EndInit();
+            this.tbp_Emprestimos.ResumeLayout(false);
+            this.tbp_Emprestimos.PerformLayout();
+            this.tbp_Estoque.ResumeLayout(false);
+            this.tbp_Estoque.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridViewDados;
+        private System.Windows.Forms.Label lbl_Titulo;
+        private System.Windows.Forms.Label lbl_Autor;
+        private System.Windows.Forms.Label lbl_Editora;
+        private System.Windows.Forms.Label lbl_Publicado;
+        private System.Windows.Forms.Label lbl_Quantidade;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lbl_empNome;
+        private System.Windows.Forms.Label lbl_empdataEmprestimo;
+        private System.Windows.Forms.Label lbl_empDataDevolucao;
+        private System.Windows.Forms.Label lbl_empLivros;
+        private System.Windows.Forms.NumericUpDown num_Quantidade;
+        private System.Windows.Forms.NumericUpDown num_Publicado;
+        private System.Windows.Forms.TextBox txb_Editora;
+        private System.Windows.Forms.TextBox txb_Autor;
+        private System.Windows.Forms.TextBox txb_Titulo;
+        private System.Windows.Forms.RichTextBox txb_Descricao;
+        private System.Windows.Forms.TextBox txb_empNome;
+        private System.Windows.Forms.DateTimePicker datetime_dataEmprestimo;
+        private System.Windows.Forms.DateTimePicker datetime_dataDevolucao;
+        private System.Windows.Forms.DataGridView dataGridViewLivrosEmprestados;
+        private System.Windows.Forms.Button bt_EmprestarLivros;
+        private System.Windows.Forms.Button bt_AdicionarLivro;
+        private System.Windows.Forms.Label lbl_empCodigo;
+        private System.Windows.Forms.TextBox txb_empCodigo;
+        private System.Windows.Forms.Button bt_DevolverLivros;
+        private System.Windows.Forms.Button bt_RemoverLivro;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tbc_Geral;
+        private System.Windows.Forms.TabPage tbp_Biblioteca;
+        private System.Windows.Forms.TabPage tbp_Emprestimos;
+        private System.Windows.Forms.Button bt_BuscarLivros;
+        private System.Windows.Forms.TabPage tbp_Estoque;
+        private System.Windows.Forms.Button bt_LimparBusca;
+        private System.Windows.Forms.Button bt_LimparEmpLivros;
+        private System.Windows.Forms.Button bt_LimparLivroEstoque;
+        private System.Windows.Forms.Button bt_RemoverEmpLivros;
+        private System.Windows.Forms.Button bt_AdicionarEmpLivros;
+        private System.Windows.Forms.Button bt_BuscarEmprestimos;
+        private System.Windows.Forms.Button bt_BuscarLivrosEstoque;
+        private System.Windows.Forms.RichTextBox txb_DescricaoBusca;
+        private System.Windows.Forms.Label lbl_TituloBusca;
+        private System.Windows.Forms.Label lbl_AutorBusca;
+        private System.Windows.Forms.Label lbl_EditorBusca;
+        private System.Windows.Forms.Label lbl_PublicadoBusca;
+        private System.Windows.Forms.Label lbl_DescricaoBusca;
+        private System.Windows.Forms.PictureBox picb_ImagemBusca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

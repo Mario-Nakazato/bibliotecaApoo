@@ -17,3 +17,22 @@ C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientad
 C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.xml
 C:\Users\Notebook\Documents\Arquivos\Mário\UTFPR-CP\Análise E Projeto Orientado A Objetos\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.csproj.CopyComplete
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\biblioteca.exe.config
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\biblioteca.exe
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\biblioteca.pdb
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.SqlServer.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.xml
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\EntityFramework.SqlServer.xml
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\bin\Debug\System.Data.SQLite.xml
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.csproj.AssemblyReference.cache
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.Form.resources
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.Properties.Resources.resources
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.csproj.GenerateResource.cache
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.csproj.CoreCompileInputs.cache
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.csproj.CopyComplete
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.exe
+C:\Archives\Eng Computacao\2021 - 1\APOO\bibliotecaApoo\biblioteca\biblioteca\obj\Debug\biblioteca.pdb
