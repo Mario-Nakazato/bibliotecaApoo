@@ -66,7 +66,10 @@ namespace biblioteca
             }
             set
             {
-                _quantidade = value;
+                if (value > 0)
+                {
+                    _quantidade = value;
+                }
             }
         }
         public string descricao
