@@ -13,29 +13,27 @@ namespace biblioteca
 {
     class SQLite
     {
-        private static string bancoDados = Application.StartupPath + @"\bd_biblioteca.db";
-        private static string conexao = @"Data Source = " + bancoDados + "; Version = 3";
-        private SQLiteConnection conectar = new SQLiteConnection(conexao);
+        private string bancoDados;
+        private string conexao;
+        private SQLiteConnection conectar;
 
         public SQLite()
         {
-            Conectar();
-            Console.WriteLine("SQLite construtor");
+            bancoDados = Application.StartupPath + @"\biblioteca.db";
+            conexao = @"Data Source = " + bancoDados + "; Version = 3";
+            conectar = new SQLiteConnection(conexao);
         }
 
-        public void Conectar()
+        public void Conectar()//Reconstruir o banco do zero. Descontinuado no momento
         {
-            Console.WriteLine("SQLite metodo Conectar");
             if (!File.Exists(bancoDados))
             {
                 SQLiteConnection.CreateFile(bancoDados);
-                Console.WriteLine("Criando banco de dados SQLite");
             }
 
             try
             {
                 conectar.Open();
-                Console.WriteLine("Conectado SQLite");
             }
             catch (Exception ex)
             {
@@ -44,7 +42,6 @@ namespace biblioteca
             finally
             {
                 conectar.Close();
-                Console.WriteLine("SQLite Close");
             }
         }
 
@@ -53,14 +50,15 @@ namespace biblioteca
             try
             {
                 conectar.Open();
+                
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conectar;
 
-                comando.CommandText = "INSERT INTO livro (liv_titulo, liv_autor, liv_editora, liv_publicado, liv_quantidade, liv_descricao)" + 
+                comando.CommandText = "INSERT INTO LIVRO (liv_titulo, liv_autor, liv_editora, liv_publicado, liv_quantidade, liv_descricao)" +
                     "VALUES " + "('" + titulo + "', '" + autor + "', '" + editora + "', '" + publicado + "', '" + quantidade + "', '" + descricao + "')";
+                
                 comando.ExecuteNonQuery();
                 comando.Dispose();
-                Console.WriteLine("Registro inserido SQLite");
             }
             catch (Exception ex)
             {
@@ -69,7 +67,6 @@ namespace biblioteca
             finally
             {
                 conectar.Close();
-                Console.WriteLine("SQLite Close");
             }
         }
 
@@ -78,13 +75,14 @@ namespace biblioteca
             try
             {
                 conectar.Open();
+
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conectar;
 
-                comando.CommandText = "DELETE FROM livro WHERE liv_codigo = '" + id + "'";
+                comando.CommandText = "DELETE FROM LIVRO WHERE liv_id = '" + id + "'";
+                
                 comando.ExecuteNonQuery();
                 comando.Dispose();
-                Console.WriteLine("Registro excluido SQLite");
             }
             catch (Exception ex)
             {
@@ -93,26 +91,31 @@ namespace biblioteca
             finally
             {
                 conectar.Close();
-                Console.WriteLine("SQLite Close");
             }
         }
 
-        public DataTable ProcurarLivro(string titulo)
+        public DataTable ProcurarLivro(string pesquisa, string atributo)
         {
             DataTable dados = new DataTable(); ;
             try
             {
-                string query = "SELECT * FROM livro";
-                
-                if (titulo != "")
+                string query = "SELECT * FROM LIVRO";
+
+                if (atributo == "titulo")
                 {
-                    query = "SELECT * FROM livro WHERE liv_titulo LIKE '%" + titulo + "%'";
+                    if (pesquisa != "")
+                    {
+                        query = "SELECT * FROM LIVRO WHERE liv_titulo LIKE '%" + pesquisa + "%'";
+                    }
+                }
+                else if (atributo == "id")
+                {
+                    query = "SELECT * FROM LIVRO WHERE liv_id = " + pesquisa;
                 }
                 
                 SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, conexao);
 
                 conectar.Open();
-
                 adaptador.Fill(dados);
             }
             catch (Exception ex)
@@ -122,7 +125,6 @@ namespace biblioteca
             finally
             {
                 conectar.Close();
-                Console.WriteLine("SQLite Close");
             }
             return dados;
         }

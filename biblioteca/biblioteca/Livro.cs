@@ -8,12 +8,55 @@ namespace biblioteca
 {
     class Livro
     {
+        private string _id;
         private string _titulo;
         private string _autor;
         private string _editora;
-        private int _publicado;
-        private int _quantidade;
+        private string _publicado;
+        private string _quantidade;
         private string _descricao;
+
+        public Livro()
+        {
+        }
+
+        public Livro(string titulo, string autor, string editora, string publicacao, string quantidade, string descricao)
+        {
+            _id = id;
+            _titulo = titulo;
+            _autor = autor;
+            _editora = editora;
+            _publicado = publicacao;
+            _quantidade = quantidade;
+            _descricao = descricao;
+        }
+
+        public Livro(string id, string titulo, string autor, string editora, string publicacao, string quantidade, string descricao)
+        {
+            _id = id;
+            _titulo = titulo;
+            _autor = autor;
+            _editora = editora;
+            _publicado = publicacao;
+            _quantidade = quantidade;
+            _descricao = descricao;
+        }
+
+        public string id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (int.Parse(value) > 0)
+                {
+                    _id = value;
+                }
+            }
+        }
+        
         public string titulo
         {
             get
@@ -25,6 +68,7 @@ namespace biblioteca
                 _titulo = value;
             }
         }
+        
         public string autor
         {
             get
@@ -36,6 +80,7 @@ namespace biblioteca
                 _autor = value;
             }
         }
+        
         public string editora
         {
             get
@@ -47,7 +92,8 @@ namespace biblioteca
                 _editora = value;
             }
         }
-        public int publicado
+        
+        public string publicado
         {
             get
             {
@@ -55,10 +101,14 @@ namespace biblioteca
             }
             set
             {
-                _publicado = value;
+                if (int.Parse(value) > 0)
+                {
+                    _publicado = value;
+                }
             }
         }
-        public int quantidade
+        
+        public string quantidade
         {
             get
             {
@@ -66,12 +116,13 @@ namespace biblioteca
             }
             set
             {
-                if (value >= 0)
+                if (int.Parse(value) >= 0)
                 {
                     _quantidade = value;
                 }
             }
         }
+        
         public string descricao
         {
             get

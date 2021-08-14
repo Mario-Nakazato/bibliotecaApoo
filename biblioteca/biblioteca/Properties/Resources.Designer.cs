@@ -63,9 +63,9 @@ namespace biblioteca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CapaLivroLua {
+        internal static System.Drawing.Bitmap Programando_em_Lua {
             get {
-                object obj = ResourceManager.GetObject("CapaLivroLua", resourceCulture);
+                object obj = ResourceManager.GetObject("Programando em Lua", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

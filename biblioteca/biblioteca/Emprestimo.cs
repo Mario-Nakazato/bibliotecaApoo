@@ -8,11 +8,20 @@ namespace biblioteca
 {
     class Emprestimo
     {
-        private int _codigo;
+        private string _codigo;
         private string _nomeCompleto;
         private string _dataEmprestimo;
         private string _dataDevolucao;
-        public int codigo
+
+        public Emprestimo(string codigo, string nomeCompleto, string dataEmprestimo, string dataDevolucao)
+        {
+            _codigo = codigo;
+            _nomeCompleto = nomeCompleto;
+            _dataEmprestimo = dataEmprestimo;
+            _dataDevolucao = dataDevolucao;
+        }
+
+        public string codigo
         {
             get
             {
@@ -20,9 +29,13 @@ namespace biblioteca
             }
             set
             {
-                _codigo = value;
+                if (int.Parse(value) >= 0)
+                {
+                    _codigo = value;
+                }
             }
         }
+        
         public string nomeCompleto
         {
             get
@@ -34,6 +47,7 @@ namespace biblioteca
                 _nomeCompleto = value;
             }
         }
+        
         public string dataEmprestimo
         {
             get
@@ -45,6 +59,7 @@ namespace biblioteca
                 _dataEmprestimo = value;
             }
         }
+        
         public string dataDevolucao
         {
             get
