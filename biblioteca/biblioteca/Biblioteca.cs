@@ -30,5 +30,14 @@ namespace biblioteca
         {
             return banco.ProcurarLivro(livro.titulo, pesquisa);
         }
+        public void EmprestarLivro(Emprestimo emprestimo, string[] livros)
+        {
+            banco.InserirEmprestimo(emprestimo.codigo, emprestimo.nomeCompleto, emprestimo.dataEmprestimo, emprestimo.dataDevolucao, livros);
+        }
+
+        public DataTable ListarEmprestimo(Emprestimo emprestimo, string pesquisa)
+        {
+            return banco.ProcurarEmprestimo(emprestimo.codigo, pesquisa);
+        }
     }
 }

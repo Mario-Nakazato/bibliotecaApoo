@@ -27,19 +27,30 @@ namespace biblioteca
             biblioteca = new Biblioteca();
         }
 
-        private void Listadgv(string pesquisa)
+        private void ListaLivrodgv(string pesquisa)
         {
             livro = new Livro();
             livro.titulo = pesquisa;
-            dgvBanco.Rows.Clear();
+            dgvEstoque.Rows.Clear();
             DataTable dados = biblioteca.ListarLivros(livro, "titulo");
             foreach (DataRow linha in dados.Rows)
             {
-                dgvBanco.Rows.Add(linha.ItemArray);
-                Console.WriteLine(linha.ItemArray.Length);
-                Console.WriteLine(dados.Rows);
+                dgvEstoque.Rows.Add(linha.ItemArray);
             }
-            dgvBanco.ClearSelection();
+            dgvEstoque.ClearSelection();
+        }
+
+        private void ListaEmprestimodgv(string pesquisa)
+        {
+            emprestimo = new Emprestimo();
+            emprestimo.codigo = pesquisa;
+            dgvEmprestimo.Rows.Clear();
+            DataTable dados = biblioteca.ListarEmprestimo(emprestimo, "codigo");
+            foreach (DataRow linha in dados.Rows)
+            {
+                dgvEmprestimo.Rows.Add(linha.ItemArray);
+            }
+            dgvEmprestimo.ClearSelection();
         }
 
         private void Form_Load(object sender, EventArgs e)
@@ -51,26 +62,27 @@ namespace biblioteca
             lblDescricaoBiblioteca.Text = "";
             rtxDescricaoBiblioteca.Visible = false;
             //Imagem invisivel
-            Listadgv("");
+            ListaLivrodgv("");
+            ListaEmprestimodgv("");
         }
 
         private void dgvBanco_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex != -1 && tab.SelectedTab.Text == "Biblioteca")
             {
-                lblTituloBiblioteca.Text = "Titulo: " + dgvBanco.SelectedRows[0].Cells[1].Value.ToString();
-                lblAutorBiblioteca.Text = "Autor: " + dgvBanco.SelectedRows[0].Cells[2].Value.ToString();
-                lblEditoraBiblioteca.Text = "Editora: " + dgvBanco.SelectedRows[0].Cells[3].Value.ToString();
-                lblPublicadoBiblioteca.Text = "Publicado: " + dgvBanco.SelectedRows[0].Cells[4].Value.ToString();
+                lblTituloBiblioteca.Text = "Titulo: " + dgvEstoque.SelectedRows[0].Cells[1].Value.ToString();
+                lblAutorBiblioteca.Text = "Autor: " + dgvEstoque.SelectedRows[0].Cells[2].Value.ToString();
+                lblEditoraBiblioteca.Text = "Editora: " + dgvEstoque.SelectedRows[0].Cells[3].Value.ToString();
+                lblPublicadoBiblioteca.Text = "Publicado: " + dgvEstoque.SelectedRows[0].Cells[4].Value.ToString();
                 lblDescricaoBiblioteca.Text = "Descrição:";
                 rtxDescricaoBiblioteca.Visible = true;
-                rtxDescricaoBiblioteca.Text = dgvBanco.SelectedRows[0].Cells[6].Value.ToString();
+                rtxDescricaoBiblioteca.Text = dgvEstoque.SelectedRows[0].Cells[6].Value.ToString();
             }
         }
 
         private void btnBuscaBiblioteca_Click(object sender, EventArgs e)
         {
-            Listadgv(txtPesquisaBiblioteca.Text);
+            ListaLivrodgv(txtPesquisaBiblioteca.Text);
         }
 
         private void btnLimparBiblioteca_Click(object sender, EventArgs e)
@@ -82,12 +94,12 @@ namespace biblioteca
             lblPublicadoBiblioteca.Text = "";
             lblDescricaoBiblioteca.Text = "";
             rtxDescricaoBiblioteca.Visible = false;
-            Listadgv("");
+            ListaLivrodgv("");
         }
 
         private void btnBuscarEstoque_Click(object sender, EventArgs e)
         {
-            Listadgv(txtTituloEstoque.Text);
+            ListaLivrodgv(txtTituloEstoque.Text);
         }
 
         private void btnAdicionarEstoque_Click(object sender, EventArgs e)
@@ -100,7 +112,7 @@ namespace biblioteca
             nudPublicadoEstoque.Value = 0;
             nudQuantidadeEstoque.Value = 0;
             rtxDescricaoEstoque.Text = "";
-            Listadgv("");
+            ListaLivrodgv("");
         }
 
         private void btnRemoverEstoque_Click(object sender, EventArgs e)
@@ -108,9 +120,9 @@ namespace biblioteca
             try
             {
                 livro = new Livro();
-                livro.id = dgvBanco.SelectedRows[0].Cells[0].Value.ToString();
+                livro.id = dgvEstoque.SelectedRows[0].Cells[0].Value.ToString();
                 biblioteca.RemoverLivro(livro);
-                Listadgv("");
+                ListaLivrodgv("");
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -126,7 +138,7 @@ namespace biblioteca
             nudPublicadoEstoque.Value = 0;
             nudQuantidadeEstoque.Value = 0;
             rtxDescricaoEstoque.Text = "";
-            Listadgv("");
+            ListaLivrodgv("");
         }
 
         private void btnAdicionarEmprestimo_Click(object sender, EventArgs e)
@@ -134,13 +146,13 @@ namespace biblioteca
             try
             {
                 livro = new Livro();
-                livro.titulo = dgvBanco.SelectedRows[0].Cells[0].Value.ToString();
+                livro.titulo = dgvEstoque.SelectedRows[0].Cells[0].Value.ToString();
                 DataTable dados = biblioteca.ListarLivros(livro, "id");
                 foreach (DataRow linha in dados.Rows)
                 {
                     dgvLivro.Rows.Add(linha.ItemArray);
                 }
-                dgvBanco.ClearSelection();
+                dgvEstoque.ClearSelection();
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -163,16 +175,54 @@ namespace biblioteca
 
         private void btnEmprestar_Click(object sender, EventArgs e)
         {
-            livro = new Livro();
-            //livro.titulo = dgvBanco.SelectedRows[0].Cells[0].Value.ToString();
-            //emprestimo = new Emprestimo(txtCodigoEmprestimo.Text, txtNomeEmprestimo.Text, dtpEmprestimo.Value.ToString(), dtpDevolucao.Value.ToString(), );
-            //biblioteca.EmprestarLivro(emprestimo);
+            List<string> a = new List<string>();
+
+            foreach (DataGridViewRow row in dgvLivro.Rows)
+            {
+                a.Add(row.Cells[0].Value.ToString());
+            }
+
+            string[] livros = a.ToArray();
+
+            emprestimo = new Emprestimo(txtCodigoEmprestimo.Text, txtNomeEmprestimo.Text, dtpEmprestimo.Value.ToString(), dtpDevolucao.Value.ToString());
+            biblioteca.EmprestarLivro(emprestimo, livros);
             txtCodigoEmprestimo.Text = "";
             txtNomeEmprestimo.Text = "";
             dtpEmprestimo.Value = DateTime.Now;
             dtpDevolucao.Value = DateTime.Now;
             dgvLivro.Rows.Clear();
-            Listadgv("");
+            ListaEmprestimodgv("");
+            ListaLivrodgv("");
+        }
+
+        private void btnBuscarEmprestimo_Click(object sender, EventArgs e)
+        {
+            if (txtCodigoEmprestimo.Text != "") {
+                ListaEmprestimodgv(txtCodigoEmprestimo.Text);
+                txtNomeEmprestimo.Text = dgvEmprestimo.Rows[0].Cells[1].Value.ToString();
+                dtpEmprestimo.Value = Convert.ToDateTime(dgvEmprestimo.Rows[0].Cells[2].Value.ToString());
+                dtpDevolucao.Value = Convert.ToDateTime(dgvEmprestimo.Rows[0].Cells[3].Value.ToString());
+                //ListaLivrodgv(txtTituloEmprestimo.Text);
+
+                DataTable dados = biblioteca.ListarEmprestimo(emprestimo, "livro");
+                foreach (DataRow linha in dados.Rows)
+                {
+                    dgvLivro.Rows.Add(linha.ItemArray);
+                }
+                dgvLivro.ClearSelection();
+            }
+
+        }
+
+        private void btnLimparEmprestimo_Click(object sender, EventArgs e)
+        {
+            txtCodigoEmprestimo.Text = "";
+            txtNomeEmprestimo.Text = "";
+            dtpEmprestimo.Value = DateTime.Now;
+            dtpDevolucao.Value = DateTime.Now;
+            dgvLivro.Rows.Clear();
+            ListaEmprestimodgv("");
+            ListaLivrodgv("");
         }
     }
 }

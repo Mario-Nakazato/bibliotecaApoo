@@ -12,6 +12,11 @@ namespace biblioteca
         private string _nomeCompleto;
         private string _dataEmprestimo;
         private string _dataDevolucao;
+        private Livro _livro;
+
+        public Emprestimo()
+        {
+        }
 
         public Emprestimo(string codigo, string nomeCompleto, string dataEmprestimo, string dataDevolucao)
         {
@@ -19,6 +24,7 @@ namespace biblioteca
             _nomeCompleto = nomeCompleto;
             _dataEmprestimo = dataEmprestimo;
             _dataDevolucao = dataDevolucao;
+            //_livro = livro;
         }
 
         public string codigo
@@ -29,10 +35,10 @@ namespace biblioteca
             }
             set
             {
-                if (int.Parse(value) >= 0)
-                {
+                //if (int.Parse(value) >= 0)
+                //{
                     _codigo = value;
-                }
+                //}
             }
         }
         

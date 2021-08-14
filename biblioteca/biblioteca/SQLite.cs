@@ -128,5 +128,73 @@ namespace biblioteca
             }
             return dados;
         }
+
+        public void InserirEmprestimo(string codigo, string nomeCompleto, string dataEmprestimo, string dataDevolucao, string[] idLivros)
+        {
+            try
+            {
+                conectar.Open();
+
+                SQLiteCommand comando = new SQLiteCommand();
+                comando.Connection = conectar;
+
+                comando.CommandText = "INSERT INTO EMPRESTIMO (emp_codigo, emp_nomeCompleto, emp_dataEmprestimo, emp_dataDevolucao)" +
+                    "VALUES " + "('" + codigo + "', '" + nomeCompleto + "', '" + dataEmprestimo + "', '" + dataDevolucao + "')";
+
+                comando.ExecuteNonQuery();
+
+                for (int i = 0; i < idLivros.Length; i++)
+                {
+                    comando.CommandText = "INSERT INTO EMPRESTIMOLIVRO (emp_codigo, liv_id)" +
+                    "VALUES " + "('" + codigo + "', '" + idLivros[i] + "')";
+                    comando.ExecuteNonQuery();
+                }
+
+                comando.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao inserir registro SQLite " + ex.Message);
+            }
+            finally
+            {
+                conectar.Close();
+            }
+        }
+
+        public DataTable ProcurarEmprestimo(string pesquisa, string atributo)
+        {
+            DataTable dados = new DataTable(); ;
+            try
+            {
+                string query = "SELECT * FROM EMPRESTIMO";
+
+                if (atributo == "codigo")
+                {
+                    if (pesquisa != "")
+                    {
+                        query = "SELECT * FROM EMPRESTIMO WHERE emp_codigo = " + pesquisa;
+                    }
+                }
+                else if (atributo == "livro")
+                {
+                    query = "SELECT * FROM LIVRO WHERE liv_id IN ( SELECT liv_id FROM EMPRESTIMOLIVRO WHERE emp_codigo = '" + pesquisa + "')";
+                }
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, conexao);
+
+                conectar.Open();
+                adaptador.Fill(dados);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao inserir registro SQLite " + ex.Message);
+            }
+            finally
+            {
+                conectar.Close();
+            }
+            return dados;
+        }
     }
 }
