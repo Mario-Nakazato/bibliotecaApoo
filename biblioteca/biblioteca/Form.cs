@@ -86,7 +86,7 @@ namespace biblioteca
                 rtxDescricaoBiblioteca.Text = dgvBiblioteca.SelectedRows[0].Cells[6].Value.ToString();
                 if (dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString() != "")
                 {
-                    pbImagemBiblioteca.Image = new Bitmap(Application.StartupPath + "\\capa\\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
+                    pbImagemBiblioteca.Image = new Bitmap(Application.StartupPath + @"\capa\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
                     pbImagemBiblioteca.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
                 else
@@ -119,7 +119,7 @@ namespace biblioteca
                 lblDescricaoBiblioteca.Text = "Descrição:";
                 rtxDescricaoBiblioteca.Visible = true;
                 rtxDescricaoBiblioteca.Text = dgvBiblioteca.Rows[0].Cells[6].Value.ToString();
-                pbImagemBiblioteca.Image = new Bitmap(Application.StartupPath + "\\capa\\" + dgvBiblioteca.Rows[0].Cells[7].Value.ToString());
+                pbImagemBiblioteca.Image = new Bitmap(Application.StartupPath + @"\capa\" + dgvBiblioteca.Rows[0].Cells[7].Value.ToString());
                 pbImagemBiblioteca.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
@@ -163,7 +163,7 @@ namespace biblioteca
 
                 if (dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString() != "")
                 {
-                    File.Delete(Application.StartupPath + "\\capa\\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
+                    File.Delete(Application.StartupPath + @"\capa\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
                 }
 
                 biblioteca.RemoverLivro(livro);
@@ -307,7 +307,7 @@ namespace biblioteca
                     {
                         //string path = Path.GetFullPath(ofd.FileName);
                         string filename = Path.GetFileName(ofd.FileName);
-                        string caminho = Application.StartupPath + "\\capa\\" + filename;
+                        string caminho = Application.StartupPath + @"\capa\" + filename;
 
                         if (!File.Exists(caminho))
                         {
@@ -315,7 +315,7 @@ namespace biblioteca
                         }
                         else
                         {
-                            File.Copy(ofd.FileName, Application.StartupPath + "\\capa\\(1)" + filename);
+                            File.Copy(ofd.FileName, Application.StartupPath + @"\capa\(1)" + filename);
                         }
                         pbImagemEstoque.Image = new Bitmap(ofd.FileName);
                         pbImagemEstoque.SizeMode = PictureBoxSizeMode.StretchImage;
