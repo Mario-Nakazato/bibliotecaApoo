@@ -15,12 +15,13 @@ namespace biblioteca
         private string _publicado;
         private string _quantidade;
         private string _descricao;
+        private string _capa;
 
         public Livro()
         {
         }
 
-        public Livro(string titulo, string autor, string editora, string publicacao, string quantidade, string descricao)
+        public Livro(string titulo, string autor, string editora, string publicacao, string quantidade, string descricao, string capa)
         {
             _id = id;
             _titulo = titulo;
@@ -29,9 +30,10 @@ namespace biblioteca
             _publicado = publicacao;
             _quantidade = quantidade;
             _descricao = descricao;
+            _capa = capa;
         }
 
-        public Livro(string id, string titulo, string autor, string editora, string publicacao, string quantidade, string descricao)
+        public Livro(string id, string titulo, string autor, string editora, string publicacao, string quantidade, string descricao, string capa)
         {
             _id = id;
             _titulo = titulo;
@@ -40,6 +42,7 @@ namespace biblioteca
             _publicado = publicacao;
             _quantidade = quantidade;
             _descricao = descricao;
+            _capa = capa;
         }
 
         public string id
@@ -132,6 +135,18 @@ namespace biblioteca
             set
             {
                 _descricao = value;
+            }
+        }
+
+        public string capa
+        {
+            get
+            {
+                return _capa;
+            }
+            set
+            {
+                _capa = value;
             }
         }
     }

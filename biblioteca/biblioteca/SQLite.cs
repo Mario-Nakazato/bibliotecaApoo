@@ -45,7 +45,7 @@ namespace biblioteca
             }
         }
 
-        public void InserirLivro(string titulo, string autor, string editora, string publicado, string quantidade, string descricao)
+        public void InserirLivro(string titulo, string autor, string editora, string publicado, string quantidade, string descricao, string capa)
         {
             try
             {
@@ -54,8 +54,8 @@ namespace biblioteca
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conectar;
 
-                comando.CommandText = "INSERT INTO LIVRO (liv_titulo, liv_autor, liv_editora, liv_publicado, liv_quantidade, liv_descricao)" +
-                    "VALUES " + "('" + titulo + "', '" + autor + "', '" + editora + "', '" + publicado + "', '" + quantidade + "', '" + descricao + "')";
+                comando.CommandText = "INSERT INTO LIVRO (liv_titulo, liv_autor, liv_editora, liv_publicado, liv_quantidade, liv_descricao, liv_capa)" +
+                    "VALUES " + "('" + titulo + "', '" + autor + "', '" + editora + "', '" + publicado + "', '" + quantidade + "', '" + descricao + "', '" + capa + "')";
                 
                 comando.ExecuteNonQuery();
                 comando.Dispose();
@@ -147,6 +147,11 @@ namespace biblioteca
                 {
                     comando.CommandText = "INSERT INTO EMPRESTIMOLIVRO (emp_codigo, liv_id)" +
                     "VALUES " + "('" + codigo + "', '" + idLivros[i] + "')";
+
+                    comando.ExecuteNonQuery();
+
+                    comando.CommandText = "UPDATE LIVRO SET liv_quantidade = liv_quantidade -1 WHERE liv_id = '" + idLivros[i] + "'";
+
                     comando.ExecuteNonQuery();
                 }
 
@@ -205,6 +210,9 @@ namespace biblioteca
 
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conectar;
+
+                comando.CommandText = "UPDATE LIVRO SET liv_quantidade = liv_quantidade +1 WHERE liv_id IN ( SELECT liv_id FROM EMPRESTIMOLIVRO WHERE emp_codigo = '" + codigo + "')";
+                comando.ExecuteNonQuery();
 
                 comando.CommandText = "DELETE FROM EMPRESTIMO WHERE emp_codigo = '" + codigo + "'";
                 comando.ExecuteNonQuery();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,13 +32,13 @@ namespace biblioteca
         {
             livro = new Livro();
             livro.titulo = pesquisa;
-            dgvEstoque.Rows.Clear();
+            dgvBiblioteca.Rows.Clear();
             DataTable dados = biblioteca.ListarLivros(livro, "titulo");
             foreach (DataRow linha in dados.Rows)
             {
-                dgvEstoque.Rows.Add(linha.ItemArray);
+                dgvBiblioteca.Rows.Add(linha.ItemArray);
             }
-            dgvEstoque.ClearSelection();
+            dgvBiblioteca.ClearSelection();
         }
 
         private void ListaEmprestimodgv(string pesquisa)//Lista emprestimos na tabela de emprestimos do form
@@ -62,28 +63,65 @@ namespace biblioteca
             lblPublicadoBiblioteca.Text = "";
             lblDescricaoBiblioteca.Text = "";
             rtxDescricaoBiblioteca.Visible = false;
-            //Imagem invisivel
+            ofd.FileName = "";
+            lblDisponivel.Text = "";
             ListaLivrodgv("");
             ListaEmprestimodgv("");
+
+            //tabEmprestimo.Parent = null;
+            //tabEstoque.Parent = null;
+
         }
 
         private void dgvBanco_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex != -1 && tab.SelectedTab.Text == "Biblioteca")
             {
-                lblTituloBiblioteca.Text = "Titulo: " + dgvEstoque.SelectedRows[0].Cells[1].Value.ToString();
-                lblAutorBiblioteca.Text = "Autor: " + dgvEstoque.SelectedRows[0].Cells[2].Value.ToString();
-                lblEditoraBiblioteca.Text = "Editora: " + dgvEstoque.SelectedRows[0].Cells[3].Value.ToString();
-                lblPublicadoBiblioteca.Text = "Publicado: " + dgvEstoque.SelectedRows[0].Cells[4].Value.ToString();
+                lblTituloBiblioteca.Text = "Titulo: " + dgvBiblioteca.SelectedRows[0].Cells[1].Value.ToString();
+                lblAutorBiblioteca.Text = "Autor: " + dgvBiblioteca.SelectedRows[0].Cells[2].Value.ToString();
+                lblEditoraBiblioteca.Text = "Editora: " + dgvBiblioteca.SelectedRows[0].Cells[3].Value.ToString();
+                lblPublicadoBiblioteca.Text = "Publicado: " + dgvBiblioteca.SelectedRows[0].Cells[4].Value.ToString();
                 lblDescricaoBiblioteca.Text = "Descrição:";
                 rtxDescricaoBiblioteca.Visible = true;
-                rtxDescricaoBiblioteca.Text = dgvEstoque.SelectedRows[0].Cells[6].Value.ToString();
+                rtxDescricaoBiblioteca.Text = dgvBiblioteca.SelectedRows[0].Cells[6].Value.ToString();
+                if (dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString() != "")
+                {
+                    pbImagemBiblioteca.Image = new Bitmap(Application.StartupPath + "\\capa\\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
+                    pbImagemBiblioteca.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    pbImagemBiblioteca.Image = null;
+                }
+                if (int.Parse(dgvBiblioteca.SelectedRows[0].Cells[5].Value.ToString()) > 1)
+                {
+                    lblDisponivel.Text = "Disponível para empréstimo";
+                    lblDisponivel.ForeColor = Color.DarkGreen;
+                }
+                else
+                {
+                    lblDisponivel.Text = "Indisponível para empréstimo";
+                    lblDisponivel.ForeColor = Color.Red;
+                }
+                
             }
         }
 
         private void btnBuscaBiblioteca_Click(object sender, EventArgs e)
         {
             ListaLivrodgv(txtPesquisa.Text);
+            if (tab.SelectedTab.Text == "Biblioteca" && txtPesquisa.Text != "")
+            {
+                lblTituloBiblioteca.Text = "Titulo: " + dgvBiblioteca.Rows[0].Cells[1].Value.ToString();
+                lblAutorBiblioteca.Text = "Autor: " + dgvBiblioteca.Rows[0].Cells[2].Value.ToString();
+                lblEditoraBiblioteca.Text = "Editora: " + dgvBiblioteca.Rows[0].Cells[3].Value.ToString();
+                lblPublicadoBiblioteca.Text = "Publicado: " + dgvBiblioteca.Rows[0].Cells[4].Value.ToString();
+                lblDescricaoBiblioteca.Text = "Descrição:";
+                rtxDescricaoBiblioteca.Visible = true;
+                rtxDescricaoBiblioteca.Text = dgvBiblioteca.Rows[0].Cells[6].Value.ToString();
+                pbImagemBiblioteca.Image = new Bitmap(Application.StartupPath + "\\capa\\" + dgvBiblioteca.Rows[0].Cells[7].Value.ToString());
+                pbImagemBiblioteca.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
 
         private void btnLimparBiblioteca_Click(object sender, EventArgs e)
@@ -95,12 +133,16 @@ namespace biblioteca
             lblPublicadoBiblioteca.Text = "";
             lblDescricaoBiblioteca.Text = "";
             rtxDescricaoBiblioteca.Visible = false;
+            pbImagemBiblioteca.Image = null;
+            lblDisponivel.Text = "";
             ListaLivrodgv("");
         }
 
         private void btnAdicionarEstoque_Click(object sender, EventArgs e)
         {
-            livro = new Livro(txtTituloEstoque.Text, txtAutorEstoque.Text, txtEditoraEstoque.Text, nudPublicadoEstoque.Value.ToString(), nudQuantidadeEstoque.Value.ToString(), rtxDescricaoEstoque.Text);
+            livro = new Livro(txtTituloEstoque.Text, txtAutorEstoque.Text, txtEditoraEstoque.Text, nudPublicadoEstoque.Value.ToString(),
+                nudQuantidadeEstoque.Value.ToString(), rtxDescricaoEstoque.Text, Path.GetFileName(ofd.FileName));
+            ofd.FileName = "";
             biblioteca.AdicionarLivro(livro);
             txtTituloEstoque.Text = "";
             txtAutorEstoque.Text = "";
@@ -108,6 +150,7 @@ namespace biblioteca
             nudPublicadoEstoque.Value = 0;
             nudQuantidadeEstoque.Value = 0;
             rtxDescricaoEstoque.Text = "";
+            pbImagemEstoque.Image = null;
             ListaLivrodgv("");
         }
 
@@ -116,7 +159,7 @@ namespace biblioteca
             try
             {
                 livro = new Livro();
-                livro.id = dgvEstoque.SelectedRows[0].Cells[0].Value.ToString();
+                livro.id = dgvBiblioteca.SelectedRows[0].Cells[0].Value.ToString();
                 biblioteca.RemoverLivro(livro);
                 ListaLivrodgv("");
             }
@@ -134,6 +177,7 @@ namespace biblioteca
             nudPublicadoEstoque.Value = 0;
             nudQuantidadeEstoque.Value = 0;
             rtxDescricaoEstoque.Text = "";
+            pbImagemEstoque.Image = null;
             ListaLivrodgv("");
         }
 
@@ -141,14 +185,22 @@ namespace biblioteca
         {
             try
             {
-                livro = new Livro();
-                livro.titulo = dgvEstoque.SelectedRows[0].Cells[0].Value.ToString();
-                DataTable dados = biblioteca.ListarLivros(livro, "id");
-                foreach (DataRow linha in dados.Rows)
+                if (int.Parse(dgvBiblioteca.SelectedRows[0].Cells[5].Value.ToString()) > 1)
                 {
-                    dgvLivro.Rows.Add(linha.ItemArray);
+                    livro = new Livro();
+                    livro.titulo = dgvBiblioteca.SelectedRows[0].Cells[0].Value.ToString();
+                    DataTable dados = biblioteca.ListarLivros(livro, "id");
+                    foreach (DataRow linha in dados.Rows)
+                    {
+                        dgvLivro.Rows.Add(linha.ItemArray);
+                    }
+                    dgvBiblioteca.ClearSelection();
                 }
-                dgvEstoque.ClearSelection();
+                else
+                {
+                     MessageBox.Show("Livro indisponivel para emprestimo!", "Falha no Emprestimo", 0, MessageBoxIcon.Warning);
+                }
+                
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -232,6 +284,42 @@ namespace biblioteca
             dgvLivro.Rows.Clear();
             ListaEmprestimodgv("");
             ListaLivrodgv("");
+        }
+
+        private void btnCapaEstoque_Click(object sender, EventArgs e)
+        {
+            ofd.InitialDirectory = "C://Desktop";
+            ofd.Title = "Select image to be upload.";
+            ofd.Filter = "Image Only(*.jpg; *.jpeg; *.gif; *.bmp; .png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            ofd.FilterIndex = 1;
+            
+            try
+            {
+                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (ofd.CheckFileExists)
+                    {
+                        //string path = Path.GetFullPath(ofd.FileName);
+                        string filename = Path.GetFileName(ofd.FileName);
+                        string caminho = Application.StartupPath + "\\capa\\" + filename;
+
+                        if (!File.Exists(caminho))
+                        {
+                            File.Copy(ofd.FileName, caminho);
+                        }
+                        pbImagemEstoque.Image = new Bitmap(ofd.FileName);
+                        pbImagemEstoque.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("UPLOAD");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
