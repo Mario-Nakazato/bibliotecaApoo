@@ -45,8 +45,9 @@ namespace biblioteca
             }
         }
 
-        public void InserirLivro(string titulo, string autor, string editora, string publicado, string quantidade, string descricao, string capa)
+        public bool InserirLivro(string titulo, string autor, string editora, string publicado, string quantidade, string descricao, string capa)
         {
+            bool inserido;
             try
             {
                 conectar.Open();
@@ -59,15 +60,18 @@ namespace biblioteca
                 
                 comando.ExecuteNonQuery();
                 comando.Dispose();
+                inserido = true;
             }
             catch (Exception ex)
             {
+                inserido = false;
                 Console.WriteLine("Erro ao inserir registro SQLite " + ex.Message);
             }
             finally
             {
                 conectar.Close();
             }
+            return inserido;
         }
 
         public void ExcluirLivro(string id)
@@ -103,7 +107,7 @@ namespace biblioteca
 
                 if (atributo == "titulo")
                 {
-                    if (pesquisa != "")
+                    if (pesquisa != "*")
                     {
                         query = "SELECT * FROM LIVRO WHERE liv_titulo LIKE '%" + pesquisa + "%'";
                     }

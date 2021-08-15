@@ -12,20 +12,6 @@ namespace biblioteca
         private string _nomeCompleto;
         private string _dataEmprestimo;
         private string _dataDevolucao;
-        private Livro _livro;
-
-        public Emprestimo()
-        {
-        }
-
-        public Emprestimo(string codigo, string nomeCompleto, string dataEmprestimo, string dataDevolucao)
-        {
-            _codigo = codigo;
-            _nomeCompleto = nomeCompleto;
-            _dataEmprestimo = dataEmprestimo;
-            _dataDevolucao = dataDevolucao;
-            //_livro = livro;
-        }
 
         public string codigo
         {
@@ -35,10 +21,14 @@ namespace biblioteca
             }
             set
             {
-                //if (int.Parse(value) >= 0)
-                //{
+                if (int.TryParse(value, out int n) && int.Parse(value) >= 0)
+                {
                     _codigo = value;
-                //}
+                }
+                else
+                {
+                    _codigo = "";
+                }
             }
         }
         
@@ -50,7 +40,10 @@ namespace biblioteca
             }
             set
             {
-                _nomeCompleto = value;
+                if (value != "")
+                {
+                    _nomeCompleto = value;
+                }
             }
         }
         
@@ -62,7 +55,10 @@ namespace biblioteca
             }
             set
             {
-                _dataEmprestimo = value;
+                if (value != "")
+                {
+                    _dataEmprestimo = value;
+                }
             }
         }
         
@@ -74,7 +70,10 @@ namespace biblioteca
             }
             set
             {
-                _dataDevolucao = value;
+                if (value != "")
+                {
+                    _dataDevolucao = value;
+                }
             }
         }
     }

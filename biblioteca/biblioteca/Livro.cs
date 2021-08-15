@@ -17,34 +17,6 @@ namespace biblioteca
         private string _descricao;
         private string _capa;
 
-        public Livro()
-        {
-        }
-
-        public Livro(string titulo, string autor, string editora, string publicacao, string quantidade, string descricao, string capa)
-        {
-            _id = id;
-            _titulo = titulo;
-            _autor = autor;
-            _editora = editora;
-            _publicado = publicacao;
-            _quantidade = quantidade;
-            _descricao = descricao;
-            _capa = capa;
-        }
-
-        public Livro(string id, string titulo, string autor, string editora, string publicacao, string quantidade, string descricao, string capa)
-        {
-            _id = id;
-            _titulo = titulo;
-            _autor = autor;
-            _editora = editora;
-            _publicado = publicacao;
-            _quantidade = quantidade;
-            _descricao = descricao;
-            _capa = capa;
-        }
-
         public string id
         {
             get
@@ -68,7 +40,10 @@ namespace biblioteca
             }
             set
             {
-                _titulo = value;
+                if (value != "")
+                {
+                    _titulo = value;
+                }
             }
         }
         
@@ -80,7 +55,10 @@ namespace biblioteca
             }
             set
             {
-                _autor = value;
+                if (value != "")
+                {
+                    _autor = value;
+                }
             }
         }
         
@@ -92,7 +70,10 @@ namespace biblioteca
             }
             set
             {
-                _editora = value;
+                if (value != "")
+                {
+                    _editora = value;
+                }
             }
         }
         

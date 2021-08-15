@@ -29,14 +29,18 @@ namespace biblioteca
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvBiblioteca = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,27 +70,16 @@ namespace biblioteca
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabBiblioteca = new System.Windows.Forms.TabPage();
+            this.lblDisponivel = new System.Windows.Forms.Label();
+            this.pbImagemBiblioteca = new System.Windows.Forms.PictureBox();
             this.rtxDescricaoBiblioteca = new System.Windows.Forms.RichTextBox();
             this.lblTituloBiblioteca = new System.Windows.Forms.Label();
             this.lblAutorBiblioteca = new System.Windows.Forms.Label();
             this.lblEditoraBiblioteca = new System.Windows.Forms.Label();
             this.lblPublicadoBiblioteca = new System.Windows.Forms.Label();
             this.lblDescricaoBiblioteca = new System.Windows.Forms.Label();
-            this.btnLimparBiblioteca = new System.Windows.Forms.Button();
-            this.btnBuscaBiblioteca = new System.Windows.Forms.Button();
             this.tabEmprestimo = new System.Windows.Forms.TabPage();
             this.dgvLivro = new System.Windows.Forms.DataGridView();
-            this.btnRemoverEmprestimo = new System.Windows.Forms.Button();
-            this.btnAdicionarEmprestimo = new System.Windows.Forms.Button();
-            this.btnBuscarEmprestimo = new System.Windows.Forms.Button();
-            this.btnLimparEmprestimo = new System.Windows.Forms.Button();
-            this.tabEstoque = new System.Windows.Forms.TabPage();
-            this.btnLimparEstoque = new System.Windows.Forms.Button();
-            this.dgvEmprestimo = new System.Windows.Forms.DataGridView();
-            this.btnCapaEstoque = new System.Windows.Forms.Button();
-            this.ofd = new System.Windows.Forms.OpenFileDialog();
-            this.pbImagemBiblioteca = new System.Windows.Forms.PictureBox();
-            this.pbImagemEstoque = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +88,22 @@ namespace biblioteca
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemoverEmprestimo = new System.Windows.Forms.Button();
+            this.btnAdicionarEmprestimo = new System.Windows.Forms.Button();
+            this.btnBuscarEmprestimo = new System.Windows.Forms.Button();
+            this.btnLimparEmprestimo = new System.Windows.Forms.Button();
+            this.tabEstoque = new System.Windows.Forms.TabPage();
+            this.btnCapaEstoque = new System.Windows.Forms.Button();
+            this.btnLimparEstoque = new System.Windows.Forms.Button();
+            this.pbImagemEstoque = new System.Windows.Forms.PictureBox();
+            this.btnLimparBiblioteca = new System.Windows.Forms.Button();
+            this.btnBuscaBiblioteca = new System.Windows.Forms.Button();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.dgvEmprestimo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,22 +112,17 @@ namespace biblioteca
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Capa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblDisponivel = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBiblioteca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadeEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPublicadoEstoque)).BeginInit();
             this.tab.SuspendLayout();
             this.tabBiblioteca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemBiblioteca)).BeginInit();
             this.tabEmprestimo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
             this.tabEstoque.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagemBiblioteca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagemEstoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBiblioteca
@@ -131,14 +135,14 @@ namespace biblioteca
             this.dgvBiblioteca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBiblioteca.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.dgvBiblioteca.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBiblioteca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBiblioteca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvBiblioteca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBiblioteca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -150,6 +154,7 @@ namespace biblioteca
             this.Descricao,
             this.Capa});
             this.dgvBiblioteca.Location = new System.Drawing.Point(716, 150);
+            this.dgvBiblioteca.MultiSelect = false;
             this.dgvBiblioteca.Name = "dgvBiblioteca";
             this.dgvBiblioteca.RowHeadersVisible = false;
             this.dgvBiblioteca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -438,6 +443,25 @@ namespace biblioteca
             this.tabBiblioteca.TabIndex = 0;
             this.tabBiblioteca.Text = "Biblioteca";
             // 
+            // lblDisponivel
+            // 
+            this.lblDisponivel.AutoSize = true;
+            this.lblDisponivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisponivel.Location = new System.Drawing.Point(35, 186);
+            this.lblDisponivel.Name = "lblDisponivel";
+            this.lblDisponivel.Size = new System.Drawing.Size(112, 25);
+            this.lblDisponivel.TabIndex = 61;
+            this.lblDisponivel.Text = "Disponível";
+            // 
+            // pbImagemBiblioteca
+            // 
+            this.pbImagemBiblioteca.Location = new System.Drawing.Point(453, 39);
+            this.pbImagemBiblioteca.Name = "pbImagemBiblioteca";
+            this.pbImagemBiblioteca.Size = new System.Drawing.Size(200, 270);
+            this.pbImagemBiblioteca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImagemBiblioteca.TabIndex = 60;
+            this.pbImagemBiblioteca.TabStop = false;
+            // 
             // rtxDescricaoBiblioteca
             // 
             this.rtxDescricaoBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -498,26 +522,6 @@ namespace biblioteca
             this.lblDescricaoBiblioteca.TabIndex = 51;
             this.lblDescricaoBiblioteca.Text = "Descrição:";
             // 
-            // btnLimparBiblioteca
-            // 
-            this.btnLimparBiblioteca.Location = new System.Drawing.Point(999, 111);
-            this.btnLimparBiblioteca.Name = "btnLimparBiblioteca";
-            this.btnLimparBiblioteca.Size = new System.Drawing.Size(75, 23);
-            this.btnLimparBiblioteca.TabIndex = 3;
-            this.btnLimparBiblioteca.Text = "Limpar";
-            this.btnLimparBiblioteca.UseVisualStyleBackColor = true;
-            this.btnLimparBiblioteca.Click += new System.EventHandler(this.btnLimparBiblioteca_Click);
-            // 
-            // btnBuscaBiblioteca
-            // 
-            this.btnBuscaBiblioteca.Location = new System.Drawing.Point(918, 111);
-            this.btnBuscaBiblioteca.Name = "btnBuscaBiblioteca";
-            this.btnBuscaBiblioteca.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscaBiblioteca.TabIndex = 2;
-            this.btnBuscaBiblioteca.Text = "Buscar";
-            this.btnBuscaBiblioteca.UseVisualStyleBackColor = true;
-            this.btnBuscaBiblioteca.Click += new System.EventHandler(this.btnBuscaBiblioteca_Click);
-            // 
             // tabEmprestimo
             // 
             this.tabEmprestimo.BackColor = System.Drawing.Color.GhostWhite;
@@ -541,7 +545,7 @@ namespace biblioteca
             this.tabEmprestimo.Location = new System.Drawing.Point(4, 22);
             this.tabEmprestimo.Name = "tabEmprestimo";
             this.tabEmprestimo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEmprestimo.Size = new System.Drawing.Size(703, 650);
+            this.tabEmprestimo.Size = new System.Drawing.Size(703, 649);
             this.tabEmprestimo.TabIndex = 1;
             this.tabEmprestimo.Text = "Empréstimo";
             // 
@@ -553,14 +557,14 @@ namespace biblioteca
             this.dgvLivro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLivro.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.dgvLivro.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLivro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLivro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dgvLivro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLivro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -572,11 +576,64 @@ namespace biblioteca
             this.dataGridViewTextBoxColumn7,
             this.Column3});
             this.dgvLivro.Location = new System.Drawing.Point(11, 125);
+            this.dgvLivro.MultiSelect = false;
             this.dgvLivro.Name = "dgvLivro";
             this.dgvLivro.RowHeadersVisible = false;
             this.dgvLivro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivro.Size = new System.Drawing.Size(605, 178);
             this.dgvLivro.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Título";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Autor";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Editora";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle32;
+            this.dataGridViewTextBoxColumn5.FillWeight = 32F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Publicado";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Capa";
+            this.Column3.Name = "Column3";
+            this.Column3.Visible = false;
             // 
             // btnRemoverEmprestimo
             // 
@@ -600,7 +657,7 @@ namespace biblioteca
             // 
             // btnBuscarEmprestimo
             // 
-            this.btnBuscarEmprestimo.Location = new System.Drawing.Point(286, 370);
+            this.btnBuscarEmprestimo.Location = new System.Drawing.Point(286, 368);
             this.btnBuscarEmprestimo.Name = "btnBuscarEmprestimo";
             this.btnBuscarEmprestimo.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarEmprestimo.TabIndex = 4;
@@ -641,48 +698,9 @@ namespace biblioteca
             this.tabEstoque.Location = new System.Drawing.Point(4, 22);
             this.tabEstoque.Name = "tabEstoque";
             this.tabEstoque.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEstoque.Size = new System.Drawing.Size(703, 650);
+            this.tabEstoque.Size = new System.Drawing.Size(703, 649);
             this.tabEstoque.TabIndex = 2;
             this.tabEstoque.Text = "Estoque";
-            // 
-            // btnLimparEstoque
-            // 
-            this.btnLimparEstoque.Location = new System.Drawing.Point(622, 336);
-            this.btnLimparEstoque.Name = "btnLimparEstoque";
-            this.btnLimparEstoque.Size = new System.Drawing.Size(75, 23);
-            this.btnLimparEstoque.TabIndex = 9;
-            this.btnLimparEstoque.Text = "Limpar";
-            this.btnLimparEstoque.UseVisualStyleBackColor = true;
-            this.btnLimparEstoque.Click += new System.EventHandler(this.btnLimparEstoque_Click);
-            // 
-            // dgvEmprestimo
-            // 
-            this.dgvEmprestimo.AllowUserToAddRows = false;
-            this.dgvEmprestimo.AllowUserToDeleteRows = false;
-            this.dgvEmprestimo.AllowUserToResizeRows = false;
-            this.dgvEmprestimo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEmprestimo.BackgroundColor = System.Drawing.Color.GhostWhite;
-            this.dgvEmprestimo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmprestimo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            this.dgvEmprestimo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmprestimo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
-            this.dgvEmprestimo.Location = new System.Drawing.Point(0, 419);
-            this.dgvEmprestimo.Name = "dgvEmprestimo";
-            this.dgvEmprestimo.RowHeadersVisible = false;
-            this.dgvEmprestimo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmprestimo.Size = new System.Drawing.Size(703, 235);
-            this.dgvEmprestimo.TabIndex = 9;
             // 
             // btnCapaEstoque
             // 
@@ -695,18 +713,15 @@ namespace biblioteca
             this.btnCapaEstoque.UseVisualStyleBackColor = true;
             this.btnCapaEstoque.Click += new System.EventHandler(this.btnCapaEstoque_Click);
             // 
-            // ofd
+            // btnLimparEstoque
             // 
-            this.ofd.FileName = "openFileDialog1";
-            // 
-            // pbImagemBiblioteca
-            // 
-            this.pbImagemBiblioteca.Location = new System.Drawing.Point(453, 39);
-            this.pbImagemBiblioteca.Name = "pbImagemBiblioteca";
-            this.pbImagemBiblioteca.Size = new System.Drawing.Size(200, 270);
-            this.pbImagemBiblioteca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImagemBiblioteca.TabIndex = 60;
-            this.pbImagemBiblioteca.TabStop = false;
+            this.btnLimparEstoque.Location = new System.Drawing.Point(622, 336);
+            this.btnLimparEstoque.Name = "btnLimparEstoque";
+            this.btnLimparEstoque.Size = new System.Drawing.Size(75, 23);
+            this.btnLimparEstoque.TabIndex = 9;
+            this.btnLimparEstoque.Text = "Limpar";
+            this.btnLimparEstoque.UseVisualStyleBackColor = true;
+            this.btnLimparEstoque.Click += new System.EventHandler(this.btnLimparEstoque_Click);
             // 
             // pbImagemEstoque
             // 
@@ -717,62 +732,96 @@ namespace biblioteca
             this.pbImagemEstoque.TabIndex = 59;
             this.pbImagemEstoque.TabStop = false;
             // 
-            // dataGridViewTextBoxColumn1
+            // btnLimparBiblioteca
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.btnLimparBiblioteca.Location = new System.Drawing.Point(999, 111);
+            this.btnLimparBiblioteca.Name = "btnLimparBiblioteca";
+            this.btnLimparBiblioteca.Size = new System.Drawing.Size(75, 23);
+            this.btnLimparBiblioteca.TabIndex = 3;
+            this.btnLimparBiblioteca.Text = "Limpar";
+            this.btnLimparBiblioteca.UseVisualStyleBackColor = true;
+            this.btnLimparBiblioteca.Click += new System.EventHandler(this.btnLimparBiblioteca_Click);
             // 
-            // dataGridViewTextBoxColumn2
+            // btnBuscaBiblioteca
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Título";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.btnBuscaBiblioteca.Location = new System.Drawing.Point(918, 111);
+            this.btnBuscaBiblioteca.Name = "btnBuscaBiblioteca";
+            this.btnBuscaBiblioteca.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscaBiblioteca.TabIndex = 2;
+            this.btnBuscaBiblioteca.Text = "Buscar";
+            this.btnBuscaBiblioteca.UseVisualStyleBackColor = true;
+            this.btnBuscaBiblioteca.Click += new System.EventHandler(this.btnBuscaBiblioteca_Click);
             // 
-            // dataGridViewTextBoxColumn3
+            // ofd
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Autor";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.ofd.FileName = "openFileDialog1";
             // 
-            // dataGridViewTextBoxColumn4
+            // dgvEmprestimo
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Editora";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Visible = false;
+            this.dgvEmprestimo.AllowUserToAddRows = false;
+            this.dgvEmprestimo.AllowUserToDeleteRows = false;
+            this.dgvEmprestimo.AllowUserToResizeRows = false;
+            this.dgvEmprestimo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEmprestimo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmprestimo.BackgroundColor = System.Drawing.Color.GhostWhite;
+            this.dgvEmprestimo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmprestimo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            this.dgvEmprestimo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmprestimo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
+            this.dgvEmprestimo.Location = new System.Drawing.Point(0, 419);
+            this.dgvEmprestimo.MultiSelect = false;
+            this.dgvEmprestimo.Name = "dgvEmprestimo";
+            this.dgvEmprestimo.RowHeadersVisible = false;
+            this.dgvEmprestimo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmprestimo.Size = new System.Drawing.Size(703, 230);
+            this.dgvEmprestimo.TabIndex = 25;
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridViewTextBoxColumn5.FillWeight = 32F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Publicado";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Visible = false;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle34;
+            this.dataGridViewTextBoxColumn8.FillWeight = 32F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Visible = false;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle35;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Visible = false;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle36;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Data do Empréstimo";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
-            // Column3
+            // dataGridViewTextBoxColumn11
             // 
-            this.Column3.HeaderText = "Capa";
-            this.Column3.Name = "Column3";
-            this.Column3.Visible = false;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Data da Devolução";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
             // id
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.id.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.id.DefaultCellStyle = dataGridViewCellStyle26;
             this.id.FillWeight = 32F;
             this.id.HeaderText = "id";
             this.id.Name = "id";
@@ -781,36 +830,43 @@ namespace biblioteca
             // 
             // Column1
             // 
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle27;
             this.Column1.HeaderText = "Título";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle28;
             this.Column2.HeaderText = "Autor";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Editora
             // 
+            this.Editora.FillWeight = 50F;
             this.Editora.HeaderText = "Editora";
             this.Editora.Name = "Editora";
             this.Editora.Visible = false;
             // 
             // Publicado
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Publicado.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Publicado.DefaultCellStyle = dataGridViewCellStyle29;
             this.Publicado.FillWeight = 32F;
             this.Publicado.HeaderText = "Publicado";
             this.Publicado.Name = "Publicado";
             // 
             // Quantidade
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle30;
+            this.Quantidade.FillWeight = 15F;
             this.Quantidade.HeaderText = "Quantidade";
             this.Quantidade.Name = "Quantidade";
+            this.Quantidade.Visible = false;
             // 
             // Descricao
             // 
@@ -823,42 +879,6 @@ namespace biblioteca
             this.Capa.HeaderText = "Capa";
             this.Capa.Name = "Capa";
             this.Capa.Visible = false;
-            // 
-            // lblDisponivel
-            // 
-            this.lblDisponivel.AutoSize = true;
-            this.lblDisponivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisponivel.Location = new System.Drawing.Point(35, 186);
-            this.lblDisponivel.Name = "lblDisponivel";
-            this.lblDisponivel.Size = new System.Drawing.Size(112, 25);
-            this.lblDisponivel.TabIndex = 61;
-            this.lblDisponivel.Text = "Disponível";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridViewTextBoxColumn8.FillWeight = 32F;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Nome Completo";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Data Empréstimo";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Data Devolução";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
             // Form
             // 
@@ -884,14 +904,14 @@ namespace biblioteca
             this.tab.ResumeLayout(false);
             this.tabBiblioteca.ResumeLayout(false);
             this.tabBiblioteca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemBiblioteca)).EndInit();
             this.tabEmprestimo.ResumeLayout(false);
             this.tabEmprestimo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
             this.tabEstoque.ResumeLayout(false);
             this.tabEstoque.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagemBiblioteca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagemEstoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -943,7 +963,6 @@ namespace biblioteca
         private System.Windows.Forms.Label lblDescricaoBiblioteca;
         private System.Windows.Forms.RichTextBox rtxDescricaoBiblioteca;
         private System.Windows.Forms.DataGridView dgvLivro;
-        private System.Windows.Forms.DataGridView dgvEmprestimo;
         private System.Windows.Forms.PictureBox pbImagemEstoque;
         private System.Windows.Forms.PictureBox pbImagemBiblioteca;
         private System.Windows.Forms.Button btnCapaEstoque;
@@ -956,6 +975,12 @@ namespace biblioteca
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label lblDisponivel;
+        private System.Windows.Forms.DataGridView dgvEmprestimo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -964,11 +989,6 @@ namespace biblioteca
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Capa;
-        private System.Windows.Forms.Label lblDisponivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
     }
 }
 

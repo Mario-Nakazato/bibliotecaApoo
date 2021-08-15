@@ -16,9 +16,9 @@ namespace biblioteca
             banco = new SQLite();
         }
 
-        public void AdicionarLivro(Livro livro)
+        public bool AdicionarLivro(Livro livro)
         {
-            banco.InserirLivro(livro.titulo, livro.autor, livro.editora, livro.publicado, livro.quantidade, livro.descricao, livro.capa);
+            return banco.InserirLivro(livro.titulo, livro.autor, livro.editora, livro.publicado, livro.quantidade, livro.descricao, livro.capa);
         }
 
         public void RemoverLivro(Livro livro)
