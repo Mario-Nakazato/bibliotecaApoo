@@ -6,6 +6,20 @@
 
 - Objetivo Especifico: Gerenciar emprestimo de livros, gerenciar devolução de livros, gerenciar o estoque de livros, gerenciar reservas de livros.
 
+# Interface Grafica de Usuario
+
+- ## Biblioteca - Onde são mostrada a informação do livro, Pesquisa e Catalogo de livro da Biblioteca. Estado Vazio inicial.
+
+![](/Prints/Biblioteca.png)
+
+- ## Emprestimo - Para realizar um emprestimo ou devolução de livros da biblioteca. Estado vazio inicial para preenchimento.
+
+![](/Prints/Emprestimo.png)
+
+- ## Estoque - Para gerenciar todo o estoque de livros desde adicionar ou remover da biblioteca. Estado Vazio inicial.
+
+![](/Prints/Estoque.png)
+
 # UML
 
 - ## Diagrama de casos de uso
