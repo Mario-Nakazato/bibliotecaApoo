@@ -29,14 +29,14 @@ namespace biblioteca
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEstoque = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,11 +63,10 @@ namespace biblioteca
             this.txtCodigoEmprestimo = new System.Windows.Forms.TextBox();
             this.btnDevolver = new System.Windows.Forms.Button();
             this.btnRemoverEstoque = new System.Windows.Forms.Button();
-            this.txtPesquisaBiblioteca = new System.Windows.Forms.TextBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabBiblioteca = new System.Windows.Forms.TabPage();
             this.rtxDescricaoBiblioteca = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTituloBiblioteca = new System.Windows.Forms.Label();
             this.lblAutorBiblioteca = new System.Windows.Forms.Label();
             this.lblEditoraBiblioteca = new System.Windows.Forms.Label();
@@ -89,8 +88,12 @@ namespace biblioteca
             this.btnBuscarEmprestimo = new System.Windows.Forms.Button();
             this.btnLimparEmprestimo = new System.Windows.Forms.Button();
             this.tabEstoque = new System.Windows.Forms.TabPage();
-            this.btnBuscarEstoque = new System.Windows.Forms.Button();
             this.btnLimparEstoque = new System.Windows.Forms.Button();
+            this.dgvEmprestimo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,21 +101,20 @@ namespace biblioteca
             this.Publicado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEmprestimo = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadeEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPublicadoEstoque)).BeginInit();
             this.tab.SuspendLayout();
             this.tabBiblioteca.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabEmprestimo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
             this.tabEstoque.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEstoque
@@ -123,14 +125,14 @@ namespace biblioteca
             this.dgvEstoque.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEstoque.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvEstoque.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle57.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle57.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -140,181 +142,199 @@ namespace biblioteca
             this.Publicado,
             this.Quantidade,
             this.Descricao});
-            this.dgvEstoque.Location = new System.Drawing.Point(720, 171);
+            this.dgvEstoque.Location = new System.Drawing.Point(716, 150);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.RowHeadersVisible = false;
             this.dgvEstoque.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstoque.Size = new System.Drawing.Size(540, 507);
+            this.dgvEstoque.Size = new System.Drawing.Size(546, 529);
             this.dgvEstoque.TabIndex = 1;
             this.dgvEstoque.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBanco_CellMouseClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 152);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(65, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Titulo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 178);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(35, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(63, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Autor";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 204);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(80, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Editora";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(170, 229);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(35, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(107, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Publicado";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(324, 229);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(35, 189);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.Size = new System.Drawing.Size(123, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Quantidade";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(170, 257);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(35, 308);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(108, 25);
             this.label6.TabIndex = 7;
             this.label6.Text = "Descrição";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(180, 124);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 329);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(68, 25);
             this.label7.TabIndex = 8;
             this.label7.Text = "Nome";
             // 
             // label8
             // 
+            this.label8.AutoEllipsis = true;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(180, 150);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(116, 32);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 13);
+            this.label8.Size = new System.Drawing.Size(204, 25);
             this.label8.TabIndex = 9;
             this.label8.Text = "Data do emprestimo";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(180, 176);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(332, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 13);
+            this.label9.Size = new System.Drawing.Size(195, 25);
             this.label9.TabIndex = 10;
             this.label9.Text = "Data da Devolução";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(180, 203);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 97);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.Size = new System.Drawing.Size(84, 25);
             this.label10.TabIndex = 11;
             this.label10.Text = "Livro(s)";
             // 
             // nudQuantidadeEstoque
             // 
-            this.nudQuantidadeEstoque.Location = new System.Drawing.Point(392, 227);
+            this.nudQuantidadeEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudQuantidadeEstoque.Location = new System.Drawing.Point(164, 187);
             this.nudQuantidadeEstoque.Maximum = new decimal(new int[] {
             16,
             0,
             0,
             0});
             this.nudQuantidadeEstoque.Name = "nudQuantidadeEstoque";
-            this.nudQuantidadeEstoque.Size = new System.Drawing.Size(56, 20);
+            this.nudQuantidadeEstoque.Size = new System.Drawing.Size(56, 31);
             this.nudQuantidadeEstoque.TabIndex = 5;
             // 
             // nudPublicadoEstoque
             // 
-            this.nudPublicadoEstoque.Location = new System.Drawing.Point(238, 227);
+            this.nudPublicadoEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPublicadoEstoque.Location = new System.Drawing.Point(164, 150);
             this.nudPublicadoEstoque.Maximum = new decimal(new int[] {
             2121,
             0,
             0,
             0});
             this.nudPublicadoEstoque.Name = "nudPublicadoEstoque";
-            this.nudPublicadoEstoque.Size = new System.Drawing.Size(56, 20);
+            this.nudPublicadoEstoque.Size = new System.Drawing.Size(56, 31);
             this.nudPublicadoEstoque.TabIndex = 3;
             // 
             // txtEditoraEstoque
             // 
-            this.txtEditoraEstoque.Location = new System.Drawing.Point(238, 201);
+            this.txtEditoraEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditoraEstoque.Location = new System.Drawing.Point(164, 113);
             this.txtEditoraEstoque.Name = "txtEditoraEstoque";
-            this.txtEditoraEstoque.Size = new System.Drawing.Size(210, 20);
+            this.txtEditoraEstoque.Size = new System.Drawing.Size(283, 31);
             this.txtEditoraEstoque.TabIndex = 2;
             // 
             // txtAutorEstoque
             // 
-            this.txtAutorEstoque.Location = new System.Drawing.Point(238, 175);
+            this.txtAutorEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutorEstoque.Location = new System.Drawing.Point(164, 76);
             this.txtAutorEstoque.Name = "txtAutorEstoque";
-            this.txtAutorEstoque.Size = new System.Drawing.Size(210, 20);
+            this.txtAutorEstoque.Size = new System.Drawing.Size(283, 31);
             this.txtAutorEstoque.TabIndex = 1;
             // 
             // txtTituloEstoque
             // 
-            this.txtTituloEstoque.Location = new System.Drawing.Point(238, 149);
+            this.txtTituloEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTituloEstoque.Location = new System.Drawing.Point(164, 39);
             this.txtTituloEstoque.Name = "txtTituloEstoque";
-            this.txtTituloEstoque.Size = new System.Drawing.Size(210, 20);
+            this.txtTituloEstoque.Size = new System.Drawing.Size(283, 31);
             this.txtTituloEstoque.TabIndex = 0;
             // 
             // rtxDescricaoEstoque
             // 
-            this.rtxDescricaoEstoque.Location = new System.Drawing.Point(173, 273);
+            this.rtxDescricaoEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxDescricaoEstoque.Location = new System.Drawing.Point(40, 336);
             this.rtxDescricaoEstoque.Name = "rtxDescricaoEstoque";
-            this.rtxDescricaoEstoque.Size = new System.Drawing.Size(356, 165);
+            this.rtxDescricaoEstoque.Size = new System.Drawing.Size(576, 270);
             this.rtxDescricaoEstoque.TabIndex = 6;
             this.rtxDescricaoEstoque.Text = "";
             // 
             // txtNomeEmprestimo
             // 
-            this.txtNomeEmprestimo.Location = new System.Drawing.Point(287, 121);
+            this.txtNomeEmprestimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeEmprestimo.Location = new System.Drawing.Point(92, 326);
             this.txtNomeEmprestimo.Name = "txtNomeEmprestimo";
-            this.txtNomeEmprestimo.Size = new System.Drawing.Size(210, 20);
+            this.txtNomeEmprestimo.Size = new System.Drawing.Size(269, 31);
             this.txtNomeEmprestimo.TabIndex = 1;
             // 
             // dtpEmprestimo
             // 
-            this.dtpEmprestimo.Location = new System.Drawing.Point(287, 147);
+            this.dtpEmprestimo.Location = new System.Drawing.Point(121, 60);
             this.dtpEmprestimo.Name = "dtpEmprestimo";
             this.dtpEmprestimo.Size = new System.Drawing.Size(210, 20);
             this.dtpEmprestimo.TabIndex = 2;
             // 
             // dtpDevolucao
             // 
-            this.dtpDevolucao.Location = new System.Drawing.Point(287, 176);
+            this.dtpDevolucao.Location = new System.Drawing.Point(337, 60);
             this.dtpDevolucao.Name = "dtpDevolucao";
-            this.dtpDevolucao.Size = new System.Drawing.Size(211, 20);
+            this.dtpDevolucao.Size = new System.Drawing.Size(210, 20);
             this.dtpDevolucao.TabIndex = 3;
             // 
             // btnEmprestar
             // 
-            this.btnEmprestar.Location = new System.Drawing.Point(422, 390);
+            this.btnEmprestar.Location = new System.Drawing.Point(462, 309);
             this.btnEmprestar.Name = "btnEmprestar";
             this.btnEmprestar.Size = new System.Drawing.Size(75, 23);
             this.btnEmprestar.TabIndex = 6;
@@ -324,7 +344,7 @@ namespace biblioteca
             // 
             // btnAdicionarEstoque
             // 
-            this.btnAdicionarEstoque.Location = new System.Drawing.Point(454, 444);
+            this.btnAdicionarEstoque.Location = new System.Drawing.Point(622, 554);
             this.btnAdicionarEstoque.Name = "btnAdicionarEstoque";
             this.btnAdicionarEstoque.Size = new System.Drawing.Size(75, 23);
             this.btnAdicionarEstoque.TabIndex = 9;
@@ -335,31 +355,34 @@ namespace biblioteca
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(180, 98);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 366);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.Size = new System.Drawing.Size(80, 25);
             this.label11.TabIndex = 24;
             this.label11.Text = "Codigo";
             // 
             // txtCodigoEmprestimo
             // 
-            this.txtCodigoEmprestimo.Location = new System.Drawing.Point(287, 95);
+            this.txtCodigoEmprestimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoEmprestimo.Location = new System.Drawing.Point(92, 363);
             this.txtCodigoEmprestimo.Name = "txtCodigoEmprestimo";
-            this.txtCodigoEmprestimo.Size = new System.Drawing.Size(210, 20);
+            this.txtCodigoEmprestimo.Size = new System.Drawing.Size(188, 31);
             this.txtCodigoEmprestimo.TabIndex = 0;
             // 
             // btnDevolver
             // 
-            this.btnDevolver.Location = new System.Drawing.Point(341, 390);
+            this.btnDevolver.Location = new System.Drawing.Point(543, 309);
             this.btnDevolver.Name = "btnDevolver";
             this.btnDevolver.Size = new System.Drawing.Size(75, 23);
             this.btnDevolver.TabIndex = 7;
             this.btnDevolver.Text = "Devolver";
             this.btnDevolver.UseVisualStyleBackColor = true;
+            this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
             // 
             // btnRemoverEstoque
             // 
-            this.btnRemoverEstoque.Location = new System.Drawing.Point(373, 444);
+            this.btnRemoverEstoque.Location = new System.Drawing.Point(622, 583);
             this.btnRemoverEstoque.Name = "btnRemoverEstoque";
             this.btnRemoverEstoque.Size = new System.Drawing.Size(75, 23);
             this.btnRemoverEstoque.TabIndex = 8;
@@ -367,12 +390,13 @@ namespace biblioteca
             this.btnRemoverEstoque.UseVisualStyleBackColor = true;
             this.btnRemoverEstoque.Click += new System.EventHandler(this.btnRemoverEstoque_Click);
             // 
-            // txtPesquisaBiblioteca
+            // txtPesquisa
             // 
-            this.txtPesquisaBiblioteca.Location = new System.Drawing.Point(888, 88);
-            this.txtPesquisaBiblioteca.Name = "txtPesquisaBiblioteca";
-            this.txtPesquisaBiblioteca.Size = new System.Drawing.Size(210, 20);
-            this.txtPesquisaBiblioteca.TabIndex = 0;
+            this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(740, 64);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(500, 31);
+            this.txtPesquisa.TabIndex = 0;
             // 
             // tab
             // 
@@ -388,8 +412,8 @@ namespace biblioteca
             // tabBiblioteca
             // 
             this.tabBiblioteca.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabBiblioteca.Controls.Add(this.rtxDescricaoBiblioteca);
             this.tabBiblioteca.Controls.Add(this.pictureBox1);
+            this.tabBiblioteca.Controls.Add(this.rtxDescricaoBiblioteca);
             this.tabBiblioteca.Controls.Add(this.lblTituloBiblioteca);
             this.tabBiblioteca.Controls.Add(this.lblAutorBiblioteca);
             this.tabBiblioteca.Controls.Add(this.lblEditoraBiblioteca);
@@ -404,71 +428,67 @@ namespace biblioteca
             // 
             // rtxDescricaoBiblioteca
             // 
-            this.rtxDescricaoBiblioteca.Location = new System.Drawing.Point(38, 164);
+            this.rtxDescricaoBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxDescricaoBiblioteca.Location = new System.Drawing.Point(40, 336);
             this.rtxDescricaoBiblioteca.Name = "rtxDescricaoBiblioteca";
             this.rtxDescricaoBiblioteca.ReadOnly = true;
-            this.rtxDescricaoBiblioteca.Size = new System.Drawing.Size(356, 165);
+            this.rtxDescricaoBiblioteca.Size = new System.Drawing.Size(576, 270);
             this.rtxDescricaoBiblioteca.TabIndex = 59;
             this.rtxDescricaoBiblioteca.Text = "";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::biblioteca.Properties.Resources.Programando_em_Lua;
-            this.pictureBox1.Location = new System.Drawing.Point(461, 208);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 261);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
             // 
             // lblTituloBiblioteca
             // 
             this.lblTituloBiblioteca.AutoSize = true;
-            this.lblTituloBiblioteca.Location = new System.Drawing.Point(35, 45);
+            this.lblTituloBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloBiblioteca.Location = new System.Drawing.Point(35, 42);
             this.lblTituloBiblioteca.Name = "lblTituloBiblioteca";
-            this.lblTituloBiblioteca.Size = new System.Drawing.Size(36, 13);
+            this.lblTituloBiblioteca.Size = new System.Drawing.Size(71, 25);
             this.lblTituloBiblioteca.TabIndex = 46;
             this.lblTituloBiblioteca.Text = "Titulo:";
             // 
             // lblAutorBiblioteca
             // 
             this.lblAutorBiblioteca.AutoSize = true;
-            this.lblAutorBiblioteca.Location = new System.Drawing.Point(35, 71);
+            this.lblAutorBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutorBiblioteca.Location = new System.Drawing.Point(35, 79);
             this.lblAutorBiblioteca.Name = "lblAutorBiblioteca";
-            this.lblAutorBiblioteca.Size = new System.Drawing.Size(35, 13);
+            this.lblAutorBiblioteca.Size = new System.Drawing.Size(69, 25);
             this.lblAutorBiblioteca.TabIndex = 47;
             this.lblAutorBiblioteca.Text = "Autor:";
             // 
             // lblEditoraBiblioteca
             // 
             this.lblEditoraBiblioteca.AutoSize = true;
-            this.lblEditoraBiblioteca.Location = new System.Drawing.Point(35, 97);
+            this.lblEditoraBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditoraBiblioteca.Location = new System.Drawing.Point(35, 116);
             this.lblEditoraBiblioteca.Name = "lblEditoraBiblioteca";
-            this.lblEditoraBiblioteca.Size = new System.Drawing.Size(43, 13);
+            this.lblEditoraBiblioteca.Size = new System.Drawing.Size(86, 25);
             this.lblEditoraBiblioteca.TabIndex = 48;
             this.lblEditoraBiblioteca.Text = "Editora:";
             // 
             // lblPublicadoBiblioteca
             // 
             this.lblPublicadoBiblioteca.AutoSize = true;
-            this.lblPublicadoBiblioteca.Location = new System.Drawing.Point(35, 122);
+            this.lblPublicadoBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPublicadoBiblioteca.Location = new System.Drawing.Point(35, 152);
             this.lblPublicadoBiblioteca.Name = "lblPublicadoBiblioteca";
-            this.lblPublicadoBiblioteca.Size = new System.Drawing.Size(57, 13);
+            this.lblPublicadoBiblioteca.Size = new System.Drawing.Size(113, 25);
             this.lblPublicadoBiblioteca.TabIndex = 49;
             this.lblPublicadoBiblioteca.Text = "Publicado:";
             // 
             // lblDescricaoBiblioteca
             // 
             this.lblDescricaoBiblioteca.AutoSize = true;
-            this.lblDescricaoBiblioteca.Location = new System.Drawing.Point(35, 148);
+            this.lblDescricaoBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricaoBiblioteca.Location = new System.Drawing.Point(35, 308);
             this.lblDescricaoBiblioteca.Name = "lblDescricaoBiblioteca";
-            this.lblDescricaoBiblioteca.Size = new System.Drawing.Size(58, 13);
+            this.lblDescricaoBiblioteca.Size = new System.Drawing.Size(114, 25);
             this.lblDescricaoBiblioteca.TabIndex = 51;
             this.lblDescricaoBiblioteca.Text = "Descrição:";
             // 
             // btnLimparBiblioteca
             // 
-            this.btnLimparBiblioteca.Location = new System.Drawing.Point(997, 114);
+            this.btnLimparBiblioteca.Location = new System.Drawing.Point(999, 111);
             this.btnLimparBiblioteca.Name = "btnLimparBiblioteca";
             this.btnLimparBiblioteca.Size = new System.Drawing.Size(75, 23);
             this.btnLimparBiblioteca.TabIndex = 2;
@@ -478,7 +498,7 @@ namespace biblioteca
             // 
             // btnBuscaBiblioteca
             // 
-            this.btnBuscaBiblioteca.Location = new System.Drawing.Point(916, 114);
+            this.btnBuscaBiblioteca.Location = new System.Drawing.Point(918, 111);
             this.btnBuscaBiblioteca.Name = "btnBuscaBiblioteca";
             this.btnBuscaBiblioteca.Size = new System.Drawing.Size(75, 23);
             this.btnBuscaBiblioteca.TabIndex = 1;
@@ -521,14 +541,14 @@ namespace biblioteca
             this.dgvLivro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLivro.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvLivro.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLivro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLivro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvLivro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLivro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -538,11 +558,11 @@ namespace biblioteca
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dgvLivro.Location = new System.Drawing.Point(183, 219);
+            this.dgvLivro.Location = new System.Drawing.Point(11, 125);
             this.dgvLivro.Name = "dgvLivro";
             this.dgvLivro.RowHeadersVisible = false;
             this.dgvLivro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLivro.Size = new System.Drawing.Size(314, 165);
+            this.dgvLivro.Size = new System.Drawing.Size(605, 178);
             this.dgvLivro.TabIndex = 31;
             // 
             // dataGridViewTextBoxColumn1
@@ -572,8 +592,8 @@ namespace biblioteca
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle64;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewTextBoxColumn5.FillWeight = 32F;
             this.dataGridViewTextBoxColumn5.HeaderText = "Publicado";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -593,7 +613,7 @@ namespace biblioteca
             // 
             // btnRemoverEmprestimo
             // 
-            this.btnRemoverEmprestimo.Location = new System.Drawing.Point(503, 248);
+            this.btnRemoverEmprestimo.Location = new System.Drawing.Point(622, 218);
             this.btnRemoverEmprestimo.Name = "btnRemoverEmprestimo";
             this.btnRemoverEmprestimo.Size = new System.Drawing.Size(75, 23);
             this.btnRemoverEmprestimo.TabIndex = 5;
@@ -603,7 +623,7 @@ namespace biblioteca
             // 
             // btnAdicionarEmprestimo
             // 
-            this.btnAdicionarEmprestimo.Location = new System.Drawing.Point(503, 219);
+            this.btnAdicionarEmprestimo.Location = new System.Drawing.Point(622, 189);
             this.btnAdicionarEmprestimo.Name = "btnAdicionarEmprestimo";
             this.btnAdicionarEmprestimo.Size = new System.Drawing.Size(75, 23);
             this.btnAdicionarEmprestimo.TabIndex = 4;
@@ -613,7 +633,7 @@ namespace biblioteca
             // 
             // btnBuscarEmprestimo
             // 
-            this.btnBuscarEmprestimo.Location = new System.Drawing.Point(503, 93);
+            this.btnBuscarEmprestimo.Location = new System.Drawing.Point(286, 370);
             this.btnBuscarEmprestimo.Name = "btnBuscarEmprestimo";
             this.btnBuscarEmprestimo.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarEmprestimo.TabIndex = 28;
@@ -623,7 +643,7 @@ namespace biblioteca
             // 
             // btnLimparEmprestimo
             // 
-            this.btnLimparEmprestimo.Location = new System.Drawing.Point(183, 390);
+            this.btnLimparEmprestimo.Location = new System.Drawing.Point(622, 390);
             this.btnLimparEmprestimo.Name = "btnLimparEmprestimo";
             this.btnLimparEmprestimo.Size = new System.Drawing.Size(75, 23);
             this.btnLimparEmprestimo.TabIndex = 8;
@@ -634,7 +654,8 @@ namespace biblioteca
             // tabEstoque
             // 
             this.tabEstoque.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabEstoque.Controls.Add(this.btnBuscarEstoque);
+            this.tabEstoque.Controls.Add(this.label12);
+            this.tabEstoque.Controls.Add(this.pictureBox2);
             this.tabEstoque.Controls.Add(this.btnLimparEstoque);
             this.tabEstoque.Controls.Add(this.rtxDescricaoEstoque);
             this.tabEstoque.Controls.Add(this.btnRemoverEstoque);
@@ -657,72 +678,15 @@ namespace biblioteca
             this.tabEstoque.TabIndex = 2;
             this.tabEstoque.Text = "Estoque";
             // 
-            // btnBuscarEstoque
-            // 
-            this.btnBuscarEstoque.Location = new System.Drawing.Point(454, 147);
-            this.btnBuscarEstoque.Name = "btnBuscarEstoque";
-            this.btnBuscarEstoque.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarEstoque.TabIndex = 10;
-            this.btnBuscarEstoque.Text = "Buscar";
-            this.btnBuscarEstoque.UseVisualStyleBackColor = true;
-            this.btnBuscarEstoque.Click += new System.EventHandler(this.btnBuscarEstoque_Click);
-            // 
             // btnLimparEstoque
             // 
-            this.btnLimparEstoque.Location = new System.Drawing.Point(173, 444);
+            this.btnLimparEstoque.Location = new System.Drawing.Point(622, 336);
             this.btnLimparEstoque.Name = "btnLimparEstoque";
             this.btnLimparEstoque.Size = new System.Drawing.Size(75, 23);
             this.btnLimparEstoque.TabIndex = 7;
             this.btnLimparEstoque.Text = "Limpar";
             this.btnLimparEstoque.UseVisualStyleBackColor = true;
             this.btnLimparEstoque.Click += new System.EventHandler(this.btnLimparEstoque_Click);
-            // 
-            // id
-            // 
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.id.DefaultCellStyle = dataGridViewCellStyle58;
-            this.id.FillWeight = 32F;
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Título";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Autor";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Editora
-            // 
-            this.Editora.HeaderText = "Editora";
-            this.Editora.Name = "Editora";
-            // 
-            // Publicado
-            // 
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Publicado.DefaultCellStyle = dataGridViewCellStyle59;
-            this.Publicado.FillWeight = 32F;
-            this.Publicado.HeaderText = "Publicado";
-            this.Publicado.Name = "Publicado";
-            // 
-            // Quantidade
-            // 
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle60;
-            this.Quantidade.HeaderText = "Quantidade";
-            this.Quantidade.Name = "Quantidade";
-            // 
-            // Descricao
-            // 
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.Visible = false;
             // 
             // dgvEmprestimo
             // 
@@ -732,31 +696,31 @@ namespace biblioteca
             this.dgvEmprestimo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmprestimo.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvEmprestimo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle61.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle61.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmprestimo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmprestimo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgvEmprestimo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmprestimo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
-            this.dgvEmprestimo.Location = new System.Drawing.Point(6, 419);
+            this.dgvEmprestimo.Location = new System.Drawing.Point(0, 419);
             this.dgvEmprestimo.Name = "dgvEmprestimo";
             this.dgvEmprestimo.RowHeadersVisible = false;
             this.dgvEmprestimo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmprestimo.Size = new System.Drawing.Size(691, 225);
+            this.dgvEmprestimo.Size = new System.Drawing.Size(703, 235);
             this.dgvEmprestimo.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewTextBoxColumn8.FillWeight = 32F;
             this.dataGridViewTextBoxColumn8.HeaderText = "Codigo";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -779,6 +743,86 @@ namespace biblioteca
             this.dataGridViewTextBoxColumn11.HeaderText = "Data Devolução";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
+            // id
+            // 
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.id.DefaultCellStyle = dataGridViewCellStyle18;
+            this.id.FillWeight = 32F;
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Título";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Autor";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Editora
+            // 
+            this.Editora.HeaderText = "Editora";
+            this.Editora.Name = "Editora";
+            this.Editora.Visible = false;
+            // 
+            // Publicado
+            // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Publicado.DefaultCellStyle = dataGridViewCellStyle19;
+            this.Publicado.FillWeight = 32F;
+            this.Publicado.HeaderText = "Publicado";
+            this.Publicado.Name = "Publicado";
+            // 
+            // Quantidade
+            // 
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle20;
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.Visible = false;
+            // 
+            // Descricao
+            // 
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::biblioteca.Properties.Resources.Programando_em_Lua;
+            this.pictureBox2.Location = new System.Drawing.Point(453, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 270);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 59;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(35, 252);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(356, 25);
+            this.label12.TabIndex = 60;
+            this.label12.Text = "Caminho da imagem da capa TEMP";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::biblioteca.Properties.Resources.Programando_em_Lua;
+            this.pictureBox1.Location = new System.Drawing.Point(453, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 270);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -787,7 +831,7 @@ namespace biblioteca
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tab);
             this.Controls.Add(this.dgvEstoque);
-            this.Controls.Add(this.txtPesquisaBiblioteca);
+            this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.btnBuscaBiblioteca);
             this.Controls.Add(this.btnLimparBiblioteca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -803,13 +847,14 @@ namespace biblioteca
             this.tab.ResumeLayout(false);
             this.tabBiblioteca.ResumeLayout(false);
             this.tabBiblioteca.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabEmprestimo.ResumeLayout(false);
             this.tabEmprestimo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
             this.tabEstoque.ResumeLayout(false);
             this.tabEstoque.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -842,7 +887,7 @@ namespace biblioteca
         private System.Windows.Forms.TextBox txtCodigoEmprestimo;
         private System.Windows.Forms.Button btnDevolver;
         private System.Windows.Forms.Button btnRemoverEstoque;
-        private System.Windows.Forms.TextBox txtPesquisaBiblioteca;
+        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage tabBiblioteca;
         private System.Windows.Forms.TabPage tabEmprestimo;
@@ -854,13 +899,11 @@ namespace biblioteca
         private System.Windows.Forms.Button btnRemoverEmprestimo;
         private System.Windows.Forms.Button btnAdicionarEmprestimo;
         private System.Windows.Forms.Button btnBuscarEmprestimo;
-        private System.Windows.Forms.Button btnBuscarEstoque;
         private System.Windows.Forms.Label lblTituloBiblioteca;
         private System.Windows.Forms.Label lblAutorBiblioteca;
         private System.Windows.Forms.Label lblEditoraBiblioteca;
         private System.Windows.Forms.Label lblPublicadoBiblioteca;
         private System.Windows.Forms.Label lblDescricaoBiblioteca;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox rtxDescricaoBiblioteca;
         private System.Windows.Forms.DataGridView dgvLivro;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -870,6 +913,11 @@ namespace biblioteca
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridView dgvEmprestimo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -877,11 +925,9 @@ namespace biblioteca
         private System.Windows.Forms.DataGridViewTextBoxColumn Publicado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
-        private System.Windows.Forms.DataGridView dgvEmprestimo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

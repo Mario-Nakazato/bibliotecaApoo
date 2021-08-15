@@ -27,7 +27,7 @@ namespace biblioteca
             biblioteca = new Biblioteca();
         }
 
-        private void ListaLivrodgv(string pesquisa)
+        private void ListaLivrodgv(string pesquisa)//Lista livros no tabela de livros do form
         {
             livro = new Livro();
             livro.titulo = pesquisa;
@@ -40,7 +40,7 @@ namespace biblioteca
             dgvEstoque.ClearSelection();
         }
 
-        private void ListaEmprestimodgv(string pesquisa)
+        private void ListaEmprestimodgv(string pesquisa)//Lista emprestimos na tabela de emprestimos do form
         {
             emprestimo = new Emprestimo();
             emprestimo.codigo = pesquisa;
@@ -51,6 +51,7 @@ namespace biblioteca
                 dgvEmprestimo.Rows.Add(linha.ItemArray);
             }
             dgvEmprestimo.ClearSelection();
+
         }
 
         private void Form_Load(object sender, EventArgs e)
@@ -82,12 +83,12 @@ namespace biblioteca
 
         private void btnBuscaBiblioteca_Click(object sender, EventArgs e)
         {
-            ListaLivrodgv(txtPesquisaBiblioteca.Text);
+            ListaLivrodgv(txtPesquisa.Text);
         }
 
         private void btnLimparBiblioteca_Click(object sender, EventArgs e)
         {
-            txtPesquisaBiblioteca.Text = "";
+            txtPesquisa.Text = "";
             lblTituloBiblioteca.Text = "";
             lblAutorBiblioteca.Text = "";
             lblEditoraBiblioteca.Text = "";
@@ -95,11 +96,6 @@ namespace biblioteca
             lblDescricaoBiblioteca.Text = "";
             rtxDescricaoBiblioteca.Visible = false;
             ListaLivrodgv("");
-        }
-
-        private void btnBuscarEstoque_Click(object sender, EventArgs e)
-        {
-            ListaLivrodgv(txtTituloEstoque.Text);
         }
 
         private void btnAdicionarEstoque_Click(object sender, EventArgs e)
@@ -202,9 +198,8 @@ namespace biblioteca
                 txtNomeEmprestimo.Text = dgvEmprestimo.Rows[0].Cells[1].Value.ToString();
                 dtpEmprestimo.Value = Convert.ToDateTime(dgvEmprestimo.Rows[0].Cells[2].Value.ToString());
                 dtpDevolucao.Value = Convert.ToDateTime(dgvEmprestimo.Rows[0].Cells[3].Value.ToString());
-                //ListaLivrodgv(txtTituloEmprestimo.Text);
 
-                DataTable dados = biblioteca.ListarEmprestimo(emprestimo, "livro");
+                DataTable dados = biblioteca.ListarEmprestimo(emprestimo, "livro");// Lista livros no livros emprestados
                 foreach (DataRow linha in dados.Rows)
                 {
                     dgvLivro.Rows.Add(linha.ItemArray);
@@ -216,6 +211,20 @@ namespace biblioteca
 
         private void btnLimparEmprestimo_Click(object sender, EventArgs e)
         {
+            txtCodigoEmprestimo.Text = "";
+            txtNomeEmprestimo.Text = "";
+            dtpEmprestimo.Value = DateTime.Now;
+            dtpDevolucao.Value = DateTime.Now;
+            dgvLivro.Rows.Clear();
+            ListaEmprestimodgv("");
+            ListaLivrodgv("");
+        }
+
+        private void btnDevolver_Click(object sender, EventArgs e)
+        {
+            emprestimo = new Emprestimo();
+            emprestimo.codigo = txtCodigoEmprestimo.Text;
+            biblioteca.DevolverLivro(emprestimo);
             txtCodigoEmprestimo.Text = "";
             txtNomeEmprestimo.Text = "";
             dtpEmprestimo.Value = DateTime.Now;

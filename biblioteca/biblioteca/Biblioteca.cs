@@ -39,5 +39,10 @@ namespace biblioteca
         {
             return banco.ProcurarEmprestimo(emprestimo.codigo, pesquisa);
         }
+
+        public void DevolverLivro(Emprestimo emprestimo)
+        {
+            banco.InserirDevolucao(emprestimo.codigo);
+        }
     }
 }

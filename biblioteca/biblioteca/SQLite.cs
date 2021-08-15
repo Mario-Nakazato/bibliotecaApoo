@@ -196,5 +196,32 @@ namespace biblioteca
             }
             return dados;
         }
+
+        public void InserirDevolucao(string codigo)
+        {
+            try
+            {
+                conectar.Open();
+
+                SQLiteCommand comando = new SQLiteCommand();
+                comando.Connection = conectar;
+
+                comando.CommandText = "DELETE FROM EMPRESTIMO WHERE emp_codigo = '" + codigo + "'";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText = "DELETE FROM EMPRESTIMOLIVRO WHERE emp_codigo = '" + codigo + "'";
+                comando.ExecuteNonQuery();
+
+                comando.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao excluir registro SQLite " + ex.Message);
+            }
+            finally
+            {
+                conectar.Close();
+            }
+        }
     }
 }
