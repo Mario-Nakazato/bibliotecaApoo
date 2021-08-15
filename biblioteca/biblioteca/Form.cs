@@ -160,6 +160,12 @@ namespace biblioteca
             {
                 livro = new Livro();
                 livro.id = dgvBiblioteca.SelectedRows[0].Cells[0].Value.ToString();
+
+                if (dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString() != "")
+                {
+                    File.Delete(Application.StartupPath + "\\capa\\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
+                }
+
                 biblioteca.RemoverLivro(livro);
                 ListaLivrodgv("");
             }
@@ -306,6 +312,10 @@ namespace biblioteca
                         if (!File.Exists(caminho))
                         {
                             File.Copy(ofd.FileName, caminho);
+                        }
+                        else
+                        {
+                            File.Copy(ofd.FileName, Application.StartupPath + "\\capa\\(1)" + filename);
                         }
                         pbImagemEstoque.Image = new Bitmap(ofd.FileName);
                         pbImagemEstoque.SizeMode = PictureBoxSizeMode.StretchImage;

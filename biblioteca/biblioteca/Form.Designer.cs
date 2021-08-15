@@ -126,6 +126,8 @@ namespace biblioteca
             this.dgvBiblioteca.AllowUserToAddRows = false;
             this.dgvBiblioteca.AllowUserToDeleteRows = false;
             this.dgvBiblioteca.AllowUserToResizeRows = false;
+            this.dgvBiblioteca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBiblioteca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBiblioteca.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.dgvBiblioteca.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -407,13 +409,15 @@ namespace biblioteca
             // 
             // tab
             // 
+            this.tab.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tab.Controls.Add(this.tabBiblioteca);
             this.tab.Controls.Add(this.tabEmprestimo);
             this.tab.Controls.Add(this.tabEstoque);
             this.tab.Location = new System.Drawing.Point(3, 3);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
-            this.tab.Size = new System.Drawing.Size(711, 676);
+            this.tab.Size = new System.Drawing.Size(711, 675);
             this.tab.TabIndex = 0;
             // 
             // tabBiblioteca
@@ -430,7 +434,7 @@ namespace biblioteca
             this.tabBiblioteca.Location = new System.Drawing.Point(4, 22);
             this.tabBiblioteca.Name = "tabBiblioteca";
             this.tabBiblioteca.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBiblioteca.Size = new System.Drawing.Size(703, 650);
+            this.tabBiblioteca.Size = new System.Drawing.Size(703, 649);
             this.tabBiblioteca.TabIndex = 0;
             this.tabBiblioteca.Text = "Biblioteca";
             // 
