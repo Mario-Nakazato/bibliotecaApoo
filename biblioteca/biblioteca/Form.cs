@@ -308,11 +308,14 @@ namespace biblioteca
                         //string path = Path.GetFullPath(ofd.FileName);
                         string filename = Path.GetFileName(ofd.FileName);
                         string caminho = Application.StartupPath + @"\capa\" + filename;
+<<<<<<< HEAD
 
                         if (!Directory.Exists(Application.StartupPath + @"\capa"))
                         {
                             Directory.CreateDirectory(Application.StartupPath + @"\capa");
                         }
+=======
+>>>>>>> 727546345dc24b4c1a2e1f6b340eaee20edf5304
 
                         if (!File.Exists(caminho))
                         {
