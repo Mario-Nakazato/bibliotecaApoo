@@ -67,7 +67,6 @@ namespace biblioteca
             rtxDescricaoBiblioteca.Visible = false;
             lblDisponivel.Text = "";
 
-            lblPrazo.Text = "Prazo: " + biblioteca.prazo.ToString() + " dias";
             dtpDevolucao.Value = DateTime.Now.AddDays(14);
             ListaEmprestimodgv("*");
 
@@ -388,7 +387,7 @@ namespace biblioteca
             }
             else if (!int.TryParse(txtCodigoEmprestimo.Text, out int n))
             {
-                MessageBox.Show("Codigo incorreto.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Código incorreto.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -453,30 +452,41 @@ namespace biblioteca
             dtpDevolucao.Value = DateTime.Now.AddDays(14);
             dgvLivro.Rows.Clear();
             ListaEmprestimodgv("*");
-            ListarLivroBiblioteca("*");
+            ListarLivroEmprestimo("*");
         }
 
         private void btnDevolver_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(dtpDevolucao.Value <= DateTime.Now);
-
             if (dtpDevolucao.Value <= DateTime.Now)
             {
                 MessageBox.Show("Devolução atrasada.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
             }
 
-            MessageBox.Show("Devolução realizada.", "Emprestimo", MessageBoxButtons.OK);
+            if (txtCodigoEmprestimo.Text != "")
+            {
+                MessageBox.Show("Código incorreto.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (dgvLivro.Rows.Count <= 0)
+            {
+                MessageBox.Show("Sem livro(s) para devolver.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Devolução realizada.", "Emprestimo", MessageBoxButtons.OK);
 
-            emprestimo = new Emprestimo();
-            emprestimo.codigo = txtCodigoEmprestimo.Text;
-            biblioteca.DevolverLivro(emprestimo);
-            txtCodigoEmprestimo.Text = "";
-            txtNomeEmprestimo.Text = "";
-            dtpEmprestimo.Value = DateTime.Now;
-            dtpDevolucao.Value = DateTime.Now.AddDays(biblioteca.prazo);
-            dgvLivro.Rows.Clear();
-            ListaEmprestimodgv("*");
-            ListarLivroBiblioteca("*");
+                emprestimo = new Emprestimo();
+                emprestimo.codigo = txtCodigoEmprestimo.Text;
+
+                biblioteca.DevolverLivro(emprestimo);
+
+                txtCodigoEmprestimo.Text = "";
+                txtNomeEmprestimo.Text = "";
+                dtpEmprestimo.Value = DateTime.Now;
+                dtpDevolucao.Value = DateTime.Now.AddDays(biblioteca.prazo);
+                dgvLivro.Rows.Clear();
+                ListaEmprestimodgv("*");
+                ListarLivroBiblioteca("*");
+            }
         }
 
         private void txtAcesso_Click(object sender, EventArgs e)
@@ -503,6 +513,34 @@ namespace biblioteca
             else
             {
                 txtAcesso.Visible = true;
+            }
+        }
+
+        private void tab_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (e.TabPageIndex == 0)
+            {
+                dgvBiblioteca.Columns[1].Visible = true;
+                dgvBiblioteca.Columns[2].Visible = true;
+                dgvBiblioteca.Columns[3].Visible = false;
+                dgvBiblioteca.Columns[4].Visible = true;
+                dgvBiblioteca.Columns[5].Visible = false;
+            }
+            else if(e.TabPageIndex == 1)
+            {
+                dgvBiblioteca.Columns[1].Visible = true;
+                dgvBiblioteca.Columns[2].Visible = true;
+                dgvBiblioteca.Columns[3].Visible = false;
+                dgvBiblioteca.Columns[4].Visible = false;
+                dgvBiblioteca.Columns[5].Visible = false;
+            }
+            else if (e.TabPageIndex == 2)
+            {
+                dgvBiblioteca.Columns[1].Visible = true;
+                dgvBiblioteca.Columns[2].Visible = true;
+                dgvBiblioteca.Columns[3].Visible = true;
+                dgvBiblioteca.Columns[4].Visible = true;
+                dgvBiblioteca.Columns[5].Visible = true;
             }
         }
     }
