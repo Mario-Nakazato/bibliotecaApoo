@@ -167,7 +167,7 @@ namespace biblioteca
             this.dgvBiblioteca.RowHeadersVisible = false;
             this.dgvBiblioteca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBiblioteca.Size = new System.Drawing.Size(546, 529);
-            this.dgvBiblioteca.TabIndex = 4;
+            this.dgvBiblioteca.TabIndex = 3;
             this.dgvBiblioteca.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBanco_CellMouseClick);
             // 
             // id
@@ -486,7 +486,7 @@ namespace biblioteca
             this.txtPesquisa.Location = new System.Drawing.Point(740, 64);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(500, 31);
-            this.txtPesquisa.TabIndex = 1;
+            this.txtPesquisa.TabIndex = 0;
             // 
             // tab
             // 
@@ -903,7 +903,7 @@ namespace biblioteca
             this.btnLimparBiblioteca.Location = new System.Drawing.Point(999, 111);
             this.btnLimparBiblioteca.Name = "btnLimparBiblioteca";
             this.btnLimparBiblioteca.Size = new System.Drawing.Size(75, 23);
-            this.btnLimparBiblioteca.TabIndex = 3;
+            this.btnLimparBiblioteca.TabIndex = 2;
             this.btnLimparBiblioteca.Text = "Limpar";
             this.btnLimparBiblioteca.UseVisualStyleBackColor = true;
             this.btnLimparBiblioteca.Click += new System.EventHandler(this.btnLimparBiblioteca_Click);
@@ -913,7 +913,7 @@ namespace biblioteca
             this.btnBuscaBiblioteca.Location = new System.Drawing.Point(918, 111);
             this.btnBuscaBiblioteca.Name = "btnBuscaBiblioteca";
             this.btnBuscaBiblioteca.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscaBiblioteca.TabIndex = 2;
+            this.btnBuscaBiblioteca.TabIndex = 1;
             this.btnBuscaBiblioteca.Text = "Buscar";
             this.btnBuscaBiblioteca.UseVisualStyleBackColor = true;
             this.btnBuscaBiblioteca.Click += new System.EventHandler(this.btnBuscaBiblioteca_Click);

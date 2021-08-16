@@ -76,7 +76,7 @@ namespace biblioteca
             //tabBiblioteca.Parent = null;
             tabEmprestimo.Parent = null;
             tabEstoque.Parent = null;
-
+            txtPesquisa.Focus();
         }
 
         private void ListarLivroBiblioteca(string pesquisa)
@@ -213,6 +213,7 @@ namespace biblioteca
             pbImagemBiblioteca.Image = null;
             lblDisponivel.Text = "";
             ListarLivroBiblioteca("*");
+            txtPesquisa.Focus();
         }
 
         private void btnAdicionarEstoque_Click(object sender, EventArgs e)
@@ -462,7 +463,7 @@ namespace biblioteca
                 MessageBox.Show("Devolução atrasada.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
             }
 
-            if (txtCodigoEmprestimo.Text != "")
+            if (txtCodigoEmprestimo.Text == "")
             {
                 MessageBox.Show("Código incorreto.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -513,6 +514,7 @@ namespace biblioteca
             else
             {
                 txtAcesso.Visible = true;
+                txtAcesso.Focus();
             }
         }
 
