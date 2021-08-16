@@ -159,6 +159,7 @@ namespace biblioteca
 
         private void btnBuscaBiblioteca_Click(object sender, EventArgs e)
         {
+            txtPesquisa.Focus();
             ListarLivroBiblioteca(txtPesquisa.Text);
             if (dgvBiblioteca.Rows.Count > 0 && tab.SelectedTab.Text == "Biblioteca" && txtPesquisa.Text != "")
             {
