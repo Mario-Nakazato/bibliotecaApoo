@@ -82,6 +82,7 @@ namespace biblioteca
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabBiblioteca = new System.Windows.Forms.TabPage();
+            this.chkAcesso = new System.Windows.Forms.CheckBox();
             this.txtAcesso = new System.Windows.Forms.TextBox();
             this.lblMsg = new System.Windows.Forms.Label();
             this.lblBemVindo = new System.Windows.Forms.Label();
@@ -94,6 +95,7 @@ namespace biblioteca
             this.lblPublicadoBiblioteca = new System.Windows.Forms.Label();
             this.lblDescricaoBiblioteca = new System.Windows.Forms.Label();
             this.tabEmprestimo = new System.Windows.Forms.TabPage();
+            this.lblPrazo = new System.Windows.Forms.Label();
             this.dgvLivro = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,6 +106,10 @@ namespace biblioteca
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEmprestimo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemoverEmprestimo = new System.Windows.Forms.Button();
             this.btnAdicionarEmprestimo = new System.Windows.Forms.Button();
             this.btnBuscarEmprestimo = new System.Windows.Forms.Button();
@@ -115,12 +121,6 @@ namespace biblioteca
             this.btnLimparBiblioteca = new System.Windows.Forms.Button();
             this.btnBuscaBiblioteca = new System.Windows.Forms.Button();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
-            this.chkAcesso = new System.Windows.Forms.CheckBox();
-            this.lblPrazo = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBiblioteca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadeEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPublicadoEstoque)).BeginInit();
@@ -522,6 +522,16 @@ namespace biblioteca
             this.tabBiblioteca.TabIndex = 0;
             this.tabBiblioteca.Text = "Biblioteca";
             // 
+            // chkAcesso
+            // 
+            this.chkAcesso.AutoSize = true;
+            this.chkAcesso.Location = new System.Drawing.Point(6, 626);
+            this.chkAcesso.Name = "chkAcesso";
+            this.chkAcesso.Size = new System.Drawing.Size(15, 14);
+            this.chkAcesso.TabIndex = 67;
+            this.chkAcesso.UseVisualStyleBackColor = true;
+            this.chkAcesso.CheckedChanged += new System.EventHandler(this.chkAcesso_CheckedChanged);
+            // 
             // txtAcesso
             // 
             this.txtAcesso.Location = new System.Drawing.Point(27, 623);
@@ -530,6 +540,7 @@ namespace biblioteca
             this.txtAcesso.Size = new System.Drawing.Size(64, 20);
             this.txtAcesso.TabIndex = 64;
             this.txtAcesso.Click += new System.EventHandler(this.txtAcesso_Click);
+            this.txtAcesso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcesso_KeyPress);
             // 
             // lblMsg
             // 
@@ -657,6 +668,16 @@ namespace biblioteca
             this.tabEmprestimo.Size = new System.Drawing.Size(703, 649);
             this.tabEmprestimo.TabIndex = 1;
             this.tabEmprestimo.Text = "Empréstimo";
+            // 
+            // lblPrazo
+            // 
+            this.lblPrazo.AutoSize = true;
+            this.lblPrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrazo.Location = new System.Drawing.Point(6, 42);
+            this.lblPrazo.Name = "lblPrazo";
+            this.lblPrazo.Size = new System.Drawing.Size(74, 25);
+            this.lblPrazo.TabIndex = 26;
+            this.lblPrazo.Text = "Prazo:";
             // 
             // dgvLivro
             // 
@@ -789,6 +810,36 @@ namespace biblioteca
             this.dgvEmprestimo.Size = new System.Drawing.Size(703, 230);
             this.dgvEmprestimo.TabIndex = 25;
             // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewTextBoxColumn8.FillWeight = 32F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Data do empréstimo";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Data da devolução";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
             // btnRemoverEmprestimo
             // 
             this.btnRemoverEmprestimo.Location = new System.Drawing.Point(622, 218);
@@ -909,56 +960,6 @@ namespace biblioteca
             // ofd
             // 
             this.ofd.FileName = "openFileDialog1";
-            // 
-            // chkAcesso
-            // 
-            this.chkAcesso.AutoSize = true;
-            this.chkAcesso.Location = new System.Drawing.Point(6, 626);
-            this.chkAcesso.Name = "chkAcesso";
-            this.chkAcesso.Size = new System.Drawing.Size(15, 14);
-            this.chkAcesso.TabIndex = 67;
-            this.chkAcesso.UseVisualStyleBackColor = true;
-            this.chkAcesso.CheckedChanged += new System.EventHandler(this.chkAcesso_CheckedChanged);
-            // 
-            // lblPrazo
-            // 
-            this.lblPrazo.AutoSize = true;
-            this.lblPrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrazo.Location = new System.Drawing.Point(6, 42);
-            this.lblPrazo.Name = "lblPrazo";
-            this.lblPrazo.Size = new System.Drawing.Size(74, 25);
-            this.lblPrazo.TabIndex = 26;
-            this.lblPrazo.Text = "Prazo:";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridViewTextBoxColumn8.FillWeight = 32F;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Data do empréstimo";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Data da devolução";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
             // Form
             // 

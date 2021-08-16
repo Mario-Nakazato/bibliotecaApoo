@@ -24,6 +24,24 @@ namespace biblioteca
             biblioteca = new Biblioteca();
         }
 
+        private void Acesso()
+        {
+            if (txtAcesso.Text == "3264")
+            {
+                tabEmprestimo.Parent = tab;
+                txtAcesso.Visible = false;
+                MessageBox.Show("Bem vindo! Atendente.", "Acesso", MessageBoxButtons.OK);
+            }
+            else if (txtAcesso.Text == "8664")
+            {
+                tabEmprestimo.Parent = tab;
+                tabEstoque.Parent = tab;
+                txtAcesso.Visible = false;
+                MessageBox.Show("Bem vindo! Bibliotecario.", "Acesso", MessageBoxButtons.OK);
+            }
+            txtAcesso.Text = "";
+        }
+        
         private Image GetCopyImage(string path)
         {
             using (Image image = Image.FromFile(path))
@@ -463,20 +481,15 @@ namespace biblioteca
 
         private void txtAcesso_Click(object sender, EventArgs e)
         {
-            if (txtAcesso.Text == "3264")
+            Acesso();
+        }
+
+        private void txtAcesso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
             {
-                tabEmprestimo.Parent = tab;
-                txtAcesso.Visible = false;
-                MessageBox.Show("Bem vindo! Atendente.", "Acesso", MessageBoxButtons.OK);
+                Acesso();
             }
-            else if (txtAcesso.Text == "8664")
-            {
-                tabEmprestimo.Parent = tab;
-                tabEstoque.Parent = tab;
-                txtAcesso.Visible = false;
-                MessageBox.Show("Bem vindo! Bibliotecario.", "Acesso", MessageBoxButtons.OK);
-            }
-            txtAcesso.Text = "";
         }
 
         private void chkAcesso_CheckedChanged(object sender, EventArgs e)
@@ -485,6 +498,7 @@ namespace biblioteca
             {
                 tabEmprestimo.Parent = null;
                 tabEstoque.Parent = null;
+                txtAcesso.Visible = false;
             }
             else
             {
