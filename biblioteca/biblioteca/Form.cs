@@ -533,7 +533,7 @@ namespace biblioteca
                 dgvBiblioteca.Columns[1].Visible = true;
                 dgvBiblioteca.Columns[2].Visible = true;
                 dgvBiblioteca.Columns[3].Visible = false;
-                dgvBiblioteca.Columns[4].Visible = false;
+                dgvBiblioteca.Columns[4].Visible = true;
                 dgvBiblioteca.Columns[5].Visible = false;
             }
             else if (e.TabPageIndex == 2)
@@ -541,7 +541,7 @@ namespace biblioteca
                 dgvBiblioteca.Columns[1].Visible = true;
                 dgvBiblioteca.Columns[2].Visible = true;
                 dgvBiblioteca.Columns[3].Visible = true;
-                dgvBiblioteca.Columns[4].Visible = true;
+                dgvBiblioteca.Columns[4].Visible = false;
                 dgvBiblioteca.Columns[5].Visible = true;
             }
         }
