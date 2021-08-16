@@ -24,8 +24,21 @@ namespace biblioteca
             biblioteca = new Biblioteca();
         }
 
+        private Image GetCopyImage(string path)
+        {
+            using (Image image = Image.FromFile(path))
+            {
+                Bitmap bitmap = new Bitmap(image);
+                return bitmap;
+            }
+        }
+
         private void Form_Load(object sender, EventArgs e)
         {
+            txtAcesso.Visible = false;
+            lblBemVindo.Text = "Bem Vindo";
+            lblMsg.Text = "Selecione um livro da lista";
+
             ListarLivroBiblioteca("*");
 
             lblTituloBiblioteca.Text = "";
@@ -36,13 +49,16 @@ namespace biblioteca
             rtxDescricaoBiblioteca.Visible = false;
             lblDisponivel.Text = "";
 
-            ofd.FileName = "";
-
+            lblPrazo.Text = "Prazo: " + biblioteca.prazo.ToString() + " dias";
+            dtpDevolucao.Value = DateTime.Now.AddDays(14);
             ListaEmprestimodgv("*");
 
+            nudPublicadoEstoque.Value = DateTime.Now.Year;
+            ofd.FileName = "";
+
             //tabBiblioteca.Parent = null;
-            //tabEmprestimo.Parent = null;
-            //tabEstoque.Parent = null;
+            tabEmprestimo.Parent = null;
+            tabEstoque.Parent = null;
 
         }
 
@@ -90,6 +106,9 @@ namespace biblioteca
         {
             if (e.RowIndex != -1 && tab.SelectedTab.Text == "Biblioteca" && dgvBiblioteca.SelectedRows.Count > 0)
             {
+                txtAcesso.Visible = false;
+                lblBemVindo.Text = "";
+                lblMsg.Text = "";
                 lblTituloBiblioteca.Text = "Titulo: " + dgvBiblioteca.SelectedRows[0].Cells[1].Value.ToString();
                 lblAutorBiblioteca.Text = "Autor: " + dgvBiblioteca.SelectedRows[0].Cells[2].Value.ToString();
                 lblEditoraBiblioteca.Text = "Editora: " + dgvBiblioteca.SelectedRows[0].Cells[3].Value.ToString();
@@ -99,7 +118,9 @@ namespace biblioteca
                 rtxDescricaoBiblioteca.Text = dgvBiblioteca.SelectedRows[0].Cells[6].Value.ToString();
                 if (dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString() != "")
                 {
-                    pbImagemBiblioteca.Image = new Bitmap(Application.StartupPath + @"\capa\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
+                    Image image = GetCopyImage(Application.StartupPath + @"\capa\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
+                    pbImagemBiblioteca.Image = image;
+                    //pbImagemBiblioteca.Image = new Bitmap(Application.StartupPath + @"\capa\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
                     pbImagemBiblioteca.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
                 else
@@ -124,6 +145,9 @@ namespace biblioteca
             ListarLivroBiblioteca(txtPesquisa.Text);
             if (dgvBiblioteca.Rows.Count > 0 && tab.SelectedTab.Text == "Biblioteca" && txtPesquisa.Text != "")
             {
+                txtAcesso.Visible = false;
+                lblBemVindo.Text = "";
+                lblMsg.Text = "";
                 lblTituloBiblioteca.Text = "Titulo: " + dgvBiblioteca.Rows[0].Cells[1].Value.ToString();
                 lblAutorBiblioteca.Text = "Autor: " + dgvBiblioteca.Rows[0].Cells[2].Value.ToString();
                 lblEditoraBiblioteca.Text = "Editora: " + dgvBiblioteca.Rows[0].Cells[3].Value.ToString();
@@ -159,6 +183,9 @@ namespace biblioteca
 
         private void btnLimparBiblioteca_Click(object sender, EventArgs e)
         {
+            txtAcesso.Visible = false;
+            lblBemVindo.Text = "Bem Vindo";
+            lblMsg.Text = "Selecione um livro da lista";
             txtPesquisa.Text = "";
             lblTituloBiblioteca.Text = "";
             lblAutorBiblioteca.Text = "";
@@ -182,64 +209,79 @@ namespace biblioteca
             livro.descricao = rtxDescricaoEstoque.Text;
             livro.capa = Path.GetFileName(ofd.FileName);
 
-            if (!Directory.Exists(Application.StartupPath + @"\capa"))
+            if (txtTituloEstoque.Text == "")
             {
-                Directory.CreateDirectory(Application.StartupPath + @"\capa");
+                MessageBox.Show("Livro sem título.", "Estoque", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (!File.Exists(Application.StartupPath + @"\capa\" + livro.capa) && livro.capa != "")
+            else if (txtAutorEstoque.Text == "")
             {
-                File.Copy(ofd.FileName, Application.StartupPath + @"\capa\" + livro.capa);
+                MessageBox.Show("Livro sem autor.", "Estoque", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            if (biblioteca.AdicionarLivro(livro))
+            else if (txtEditoraEstoque.Text == "")
             {
-                MessageBox.Show("Livro adicionado com sucesso!", "Estoque", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Livro sem editora.", "Estoque", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Livro adicionado com sucesso!", "Estoque", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (!Directory.Exists(Application.StartupPath + @"\capa"))
+                {
+                    Directory.CreateDirectory(Application.StartupPath + @"\capa");
+                }
+                if (!File.Exists(Application.StartupPath + @"\capa\" + livro.capa) && livro.capa != "")
+                {
+                    File.Copy(ofd.FileName, Application.StartupPath + @"\capa\" + livro.capa);
+                }
+
+                if (biblioteca.AdicionarLivro(livro))
+                {
+                    MessageBox.Show("Livro adicionado com sucesso.", "Estoque", MessageBoxButtons.OK);
+                }
+                else//Não é funcional?
+                {
+                    MessageBox.Show("Ocorreu um erro. Livro não adicionado.", "Estoque", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                txtTituloEstoque.Text = "";
+                txtAutorEstoque.Text = "";
+                txtEditoraEstoque.Text = "";
+                nudPublicadoEstoque.Value = DateTime.Now.Year;
+                nudQuantidadeEstoque.Value = 0;
+                rtxDescricaoEstoque.Text = "";
+                pbImagemEstoque.Image = null;
+                ofd.FileName = "";
+
+                ListarLivroBiblioteca("*");
             }
-            
-            txtTituloEstoque.Text = "";
-            txtAutorEstoque.Text = "";
-            txtEditoraEstoque.Text = "";
-            nudPublicadoEstoque.Value = 0;
-            nudQuantidadeEstoque.Value = 0;
-            rtxDescricaoEstoque.Text = "";
-            pbImagemEstoque.Image = null;
-            ofd.FileName = "";
-            
-            ListarLivroBiblioteca("*");
         }
 
         private void btnRemoverEstoque_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            livro = new Livro();
-            livro.id = dgvBiblioteca.SelectedRows[0].Cells[0].Value.ToString();
-
-            if (dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString() != "")
+            if (dgvBiblioteca.SelectedRows.Count > 0)
             {
-                txtPesquisa.Text = "";
-                lblTituloBiblioteca.Text = "";
-                lblAutorBiblioteca.Text = "";
-                lblEditoraBiblioteca.Text = "";
-                lblPublicadoBiblioteca.Text = "";
-                lblDescricaoBiblioteca.Text = "";
-                rtxDescricaoBiblioteca.Visible = false;
-                pbImagemBiblioteca.Image = null;
-                lblDisponivel.Text = "";
-                File.Delete(Application.StartupPath + @"\capa\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
-            }
+                DialogResult btnClicado = MessageBox.Show("Esta ação removerá o livro. Deseja realmente remover o livro?", "Estoque", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (btnClicado == DialogResult.Yes)
+                {
+                    livro = new Livro();
+                    livro.id = dgvBiblioteca.SelectedRows[0].Cells[0].Value.ToString();
 
-            biblioteca.RemoverLivro(livro);
-            ListarLivroBiblioteca("*");
-            //}
-            //catch (ArgumentOutOfRangeException ex)
-            //{
-            //    Console.WriteLine("Erro " + ex.Message);
-            //}
+                    if (dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString() != "")
+                    {
+                        txtPesquisa.Text = "";
+                        lblTituloBiblioteca.Text = "";
+                        lblAutorBiblioteca.Text = "";
+                        lblEditoraBiblioteca.Text = "";
+                        lblPublicadoBiblioteca.Text = "";
+                        lblDescricaoBiblioteca.Text = "";
+                        rtxDescricaoBiblioteca.Visible = false;
+                        pbImagemBiblioteca.Image = null;
+                        lblDisponivel.Text = "";
+                        File.Delete(Application.StartupPath + @"\capa\" + dgvBiblioteca.SelectedRows[0].Cells[7].Value.ToString());
+                    }
+
+                    biblioteca.RemoverLivro(livro);
+                    ListarLivroBiblioteca("*");
+                }
+            }
         }
 
         private void btnLimparEstoque_Click(object sender, EventArgs e)
@@ -247,7 +289,7 @@ namespace biblioteca
             txtTituloEstoque.Text = "";
             txtAutorEstoque.Text = "";
             txtEditoraEstoque.Text = "";
-            nudPublicadoEstoque.Value = 0;
+            nudPublicadoEstoque.Value = DateTime.Now.Year;
             nudQuantidadeEstoque.Value = 0;
             rtxDescricaoEstoque.Text = "";
             ofd.FileName = "";
@@ -284,20 +326,26 @@ namespace biblioteca
 
         private void btnAdicionarEmprestimo_Click(object sender, EventArgs e)
         {
-            livro = new Livro();
-            if (int.Parse(dgvBiblioteca.SelectedRows[0].Cells[5].Value.ToString()) > 1)
+            if (dgvBiblioteca.SelectedRows.Count > 0)
             {
-                livro.titulo = dgvBiblioteca.SelectedRows[0].Cells[0].Value.ToString();
-                DataTable dados = biblioteca.ListarLivros(livro, "id");
-                foreach (DataRow linha in dados.Rows)
+                livro = new Livro();
+                if (int.Parse(dgvBiblioteca.SelectedRows[0].Cells[5].Value.ToString()) > 1)
                 {
-                    dgvLivro.Rows.Add(linha.ItemArray);
+
+                    dgvBiblioteca.SelectedRows[0].Cells[5].Value = -1;
+
+                    livro.titulo = dgvBiblioteca.SelectedRows[0].Cells[0].Value.ToString();
+                    DataTable dados = biblioteca.ListarLivros(livro, "id");
+                    foreach (DataRow linha in dados.Rows)
+                    {
+                        dgvLivro.Rows.Add(linha.ItemArray);
+                    }
+                    dgvBiblioteca.ClearSelection();
                 }
-                dgvBiblioteca.ClearSelection();
-            }
-            else
-            {
-                MessageBox.Show("Livro indisponivel para emprestimo!", "Falha no Emprestimo", 0, MessageBoxIcon.Warning);
+                else
+                {
+                    MessageBox.Show("Livro indisponivel para emprestimo.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -312,33 +360,49 @@ namespace biblioteca
 
         private void btnEmprestar_Click(object sender, EventArgs e)
         {
-            emprestimo = new Emprestimo();
-            
-            List<string> liv = new List<string>();
-
-            foreach (DataGridViewRow row in dgvLivro.Rows)
+            if (dtpEmprestimo.Value >= dtpDevolucao.Value)
             {
-                liv.Add(row.Cells[0].Value.ToString());
+                MessageBox.Show("Datas de emprestimo e devolução incorretas.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (dgvLivro.Rows.Count <= 0)
+            {
+                MessageBox.Show("Sem livro(s) para emprestar.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!int.TryParse(txtCodigoEmprestimo.Text, out int n))
+            {
+                MessageBox.Show("Codigo incorreto.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                emprestimo = new Emprestimo();
 
-            string[] livros = liv.ToArray();
+                List<string> liv = new List<string>();
 
-            emprestimo.codigo = txtCodigoEmprestimo.Text;
-            emprestimo.nomeCompleto =  txtNomeEmprestimo.Text;
-            emprestimo.dataEmprestimo = dtpEmprestimo.Value.ToString();
-            emprestimo.dataDevolucao = dtpDevolucao.Value.ToString();
+                foreach (DataGridViewRow row in dgvLivro.Rows)
+                {
+                    liv.Add(row.Cells[0].Value.ToString());
+                }
 
-            biblioteca.EmprestarLivro(emprestimo, livros);
+                string[] livros = liv.ToArray();
 
-            ListarLivroBiblioteca("*");
+                emprestimo.codigo = txtCodigoEmprestimo.Text;
+                emprestimo.nomeCompleto = txtNomeEmprestimo.Text;
+                emprestimo.dataEmprestimo = dtpEmprestimo.Value.ToString();
+                emprestimo.dataDevolucao = dtpDevolucao.Value.ToString();
 
-            txtCodigoEmprestimo.Text = "";
-            txtNomeEmprestimo.Text = "";
-            dtpEmprestimo.Value = DateTime.Now;
-            dtpDevolucao.Value = DateTime.Now;
-            dgvLivro.Rows.Clear();
-            
-            ListaEmprestimodgv("*");
+                biblioteca.EmprestarLivro(emprestimo, livros);
+
+                ListarLivroBiblioteca("*");
+
+                txtCodigoEmprestimo.Text = "";
+                txtNomeEmprestimo.Text = "";
+                dtpEmprestimo.Value = DateTime.Now;
+                dtpDevolucao.Value = DateTime.Now.AddDays(14);
+                dgvLivro.Rows.Clear();
+
+                ListaEmprestimodgv("*");
+                MessageBox.Show("Emprestimo realizado.", "Emprestimo", MessageBoxButtons.OK);
+            }
         }
 
         private void btnBuscarEmprestimo_Click(object sender, EventArgs e)
@@ -354,6 +418,12 @@ namespace biblioteca
 
                     ListarLivroEmprestimo(txtCodigoEmprestimo.Text);
                 }
+                else
+                {
+                    MessageBox.Show("Nada foi encontrado.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodigoEmprestimo.Text = "";
+                    ListaEmprestimodgv("*");
+                }
             }
         }
 
@@ -362,7 +432,7 @@ namespace biblioteca
             txtCodigoEmprestimo.Text = "";
             txtNomeEmprestimo.Text = "";
             dtpEmprestimo.Value = DateTime.Now;
-            dtpDevolucao.Value = DateTime.Now;
+            dtpDevolucao.Value = DateTime.Now.AddDays(14);
             dgvLivro.Rows.Clear();
             ListaEmprestimodgv("*");
             ListarLivroBiblioteca("*");
@@ -370,17 +440,56 @@ namespace biblioteca
 
         private void btnDevolver_Click(object sender, EventArgs e)
         {
+            Console.WriteLine(dtpDevolucao.Value <= DateTime.Now);
+
+            if (dtpDevolucao.Value <= DateTime.Now)
+            {
+                MessageBox.Show("Devolução atrasada.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+            }
+
+            MessageBox.Show("Devolução realizada.", "Emprestimo", MessageBoxButtons.OK);
+
             emprestimo = new Emprestimo();
             emprestimo.codigo = txtCodigoEmprestimo.Text;
             biblioteca.DevolverLivro(emprestimo);
             txtCodigoEmprestimo.Text = "";
             txtNomeEmprestimo.Text = "";
             dtpEmprestimo.Value = DateTime.Now;
-            dtpDevolucao.Value = DateTime.Now;
+            dtpDevolucao.Value = DateTime.Now.AddDays(biblioteca.prazo);
             dgvLivro.Rows.Clear();
             ListaEmprestimodgv("*");
             ListarLivroBiblioteca("*");
         }
 
+        private void txtAcesso_Click(object sender, EventArgs e)
+        {
+            if (txtAcesso.Text == "3264")
+            {
+                tabEmprestimo.Parent = tab;
+                txtAcesso.Visible = false;
+                MessageBox.Show("Bem vindo! Atendente.", "Acesso", MessageBoxButtons.OK);
+            }
+            else if (txtAcesso.Text == "8664")
+            {
+                tabEmprestimo.Parent = tab;
+                tabEstoque.Parent = tab;
+                txtAcesso.Visible = false;
+                MessageBox.Show("Bem vindo! Bibliotecario.", "Acesso", MessageBoxButtons.OK);
+            }
+            txtAcesso.Text = "";
+        }
+
+        private void chkAcesso_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkAcesso.Checked)
+            {
+                tabEmprestimo.Parent = null;
+                tabEstoque.Parent = null;
+            }
+            else
+            {
+                txtAcesso.Visible = true;
+            }
+        }
     }
 }

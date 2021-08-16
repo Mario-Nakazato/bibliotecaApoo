@@ -10,10 +10,25 @@ namespace biblioteca
     class Biblioteca
     {
         private SQLite banco;
-        
+        private double _prazo = 14;
         public Biblioteca()
         {
             banco = new SQLite();
+        }
+
+        public double prazo
+        {
+            get
+            {
+                return _prazo;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    _prazo = value;
+                }
+            }
         }
 
         public bool AdicionarLivro(Livro livro)
@@ -30,6 +45,7 @@ namespace biblioteca
         {
             return banco.ProcurarLivro(livro.titulo, pesquisa);
         }
+        
         public void EmprestarLivro(Emprestimo emprestimo, string[] livros)
         {
             banco.InserirEmprestimo(emprestimo.codigo, emprestimo.nomeCompleto, emprestimo.dataEmprestimo, emprestimo.dataDevolucao, livros);
