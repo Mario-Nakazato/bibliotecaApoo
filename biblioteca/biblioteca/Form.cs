@@ -387,6 +387,10 @@ namespace biblioteca
             {
                 MessageBox.Show("Sem livro(s) para emprestar.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (txtNomeEmprestimo.Text == "")
+            {
+                MessageBox.Show("Sem nome.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else if (!int.TryParse(txtCodigoEmprestimo.Text, out int n))
             {
                 MessageBox.Show("Código incorreto.", "Emprestimo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -544,6 +548,7 @@ namespace biblioteca
                 dgvBiblioteca.Columns[3].Visible = true;
                 dgvBiblioteca.Columns[4].Visible = false;
                 dgvBiblioteca.Columns[5].Visible = true;
+                ListarLivroBiblioteca("*");
             }
         }
     }
