@@ -4,23 +4,39 @@
 
 - Objetivo geral: O sistema tem por objetivo realizar o gerenciamento de livros de uma biblioteca.
 
-- Objetivo Especifico: Gerenciar emprestimo de livros, gerenciar devolução de livros, gerenciar o estoque de livros.
+- Objetivo Especifico: Visualização dos livros da biblioteca, gerenciar empréstimo de livros e gerenciar o estoque de livros.
 
-# Interface Grafica de Usuario
+# Interface Gráfica de Usuário
 
 ## **Versão final**
 
 - ## Biblioteca
 
-![](/Prints/BibliotecaV2.png)
+![](/Prints/BibliotecaInicial.png)
+
+- ### Selecionando livro
+
+![](/Prints/SelecionandoLivro.png)
+
+- ### Buscando livro
+
+![](/Prints/BuscandoLivro.png)
+
+- ## Senha para Acesso padrão [8664] Bibliotecario [3264] Atendente
+
+![](/Prints/SenhaAcesso.png)
 
 - ## Emprestimo
 
-![](/Prints/EmprestimoV2.png)
+![](/Prints/Emprestimo.png)
+
+- ### Buscando emprestimo
+
+![](/Prints/BuscandoEmprestimo.png)
 
 - ## Estoque
 
-![](/Prints/EstoqueV2.png)
+![](/Prints/Estoque.png)
 
 # UML
 
@@ -63,16 +79,4 @@
 
 ![](/Astah/DiagramaMaquinaEstadoLivro.png)
 
-- ## Biblioteca - Onde são mostrada a informação do livro, Pesquisa e Catalogo de livro da Biblioteca. Estado Vazio inicial.
-
-![](/Prints/Biblioteca.png)
-
-- ## Emprestimo - Para realizar um emprestimo ou devolução de livros da biblioteca. Estado vazio inicial para preenchimento.
-
-![](/Prints/Emprestimo.png)
-
-- ## Estoque - Para gerenciar todo o estoque de livros desde adicionar ou remover da biblioteca. Estado Vazio inicial.
-
-![](/Prints/Estoque.png)
-
-# **...**
+#### **Avaliação final do projeto - 9.0**
